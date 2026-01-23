@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: whitesmoke;
+}
+
+.container {
+  padding-inline: 20px;
+
+  @media (min-width:1400px) {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+.dotted{
+      fill: rgba(128, 128, 128, 0.74);
+}
+.responsive-image-cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.responsive-image-contain{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+// Dialog Box mobile Style Start 
+@media screen and (max-width:540px) {
+  .mobile-style{
+    left: -100%;
+  }
+}
+// End 

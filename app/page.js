@@ -1,66 +1,77 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client"
+import { useState } from "react";
+import Card from "@/components/organisms/card";
+import DialogBox from "@/components/organisms/dialogBox";
+import Wishlist from "@/components/atoms/wishlist";
+import Location from "@/components/atoms/location";
+import VerifiedBadge from "@/components/atoms/verifiedBadge";
+
+const cardData = [
+  {
+    image: "/images/card/card-img1.jpeg",
+    title: "Bear Grylls Survival Program-Program Survival-5 Pm to 10 Pm",
+    city: "Chennai",
+    day: "5D",
+    price: "1,000",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1761839257287-3030c9300ece?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "A card is identifiable as a single, contained unit.",
+    city: "Kolkata",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1763321402439-41eb2a0c7e7b?q=80&w=696&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "A card is identifiable as a single"
+  },
+  {
+    image: "https://images.unsplash.com/photo-1763132638674-673e0ae020d6?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "A card can stand alone, without relying on surrounding elements for context."
+  },
+]
 
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false)
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="container">
+      <Wishlist position="top-left" />
+      <Location
+        city="Delhi"
+        day="2D"
+      />
+      <VerifiedBadge
+        verified="Verified"
+        className="top-20 relative left-20 rounded-tl-2xl"
+      />
+
+      {/* <div className="grid grid-cols-4 gap-4 mt-10">
+        {cardData.map ((item,index)=>
+          <Card
+            key={index}
+            baseImage={item.image}
+            title={item.title}
+            city={item.city}
+            day={item.day}
+            // borderColor="border-red-500"
+            imageContainerStyle="h-[222px] rounded-xl rounded-b-none overflow-hidden"
+            superPower
+            wishlist
+            supercoin
+            variant="activityCard"
+            // cardEdges
+            verified="Verified"
+          />
+        )}
+      </div> */}
+      {/* <button onClick={() => setIsOpen(true)}>Dialog Open</button>
+      <DialogBox
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        title="Deactivate account Dialog Title"
+        showCloseIcon
+        closeIcon
+      >
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+      </DialogBox> */}
     </div>
   );
 }
