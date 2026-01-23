@@ -11,9 +11,6 @@ const DialogBox = ({
   title,
   closeIcon,
   children,
-  dialogBoxStyle,
-  titleStyle,
-  dialogBodyStyle,
 }) => {
   return (
     <Dialog open={isOpen} onClose={onClose} className="relative z-50">
