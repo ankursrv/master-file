@@ -3,6 +3,7 @@ Component -->
   a) location       [https://prnt.sc/1nebi2Dp-nCn]
   b) verifiedBadge  [https://prnt.sc/Bt5mFdutOz8x]
   c) wishlist       [https://prnt.sc/-LBCY_UF1JTN]
+  d) icons
 
 
 2. Molecules
@@ -11,4 +12,9 @@ Component -->
 
 
 3. Organisms
-  a) card  
+  a) card 
+  b) dialogbox 
+
+4. lib
+  a)  useIsMobile [breakpoint conditionally]
+  b)  utils [tailwind merge classes]

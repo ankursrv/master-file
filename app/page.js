@@ -5,6 +5,7 @@ import DialogBox from "@/components/organisms/dialogBox";
 import Wishlist from "@/components/atoms/wishlist";
 import Location from "@/components/atoms/location";
 import VerifiedBadge from "@/components/atoms/verifiedBadge";
+import useIsMobile from "@/lib/useIsMobile";
 
 const cardData = [
   {
@@ -31,6 +32,8 @@ const cardData = [
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isOpenTwo, setIsOpenTwo] = useState(false)
+  const isMobile = useIsMobile ()
   return (
     <div className="container">
       <Wishlist position="top-left" />
@@ -62,16 +65,28 @@ export default function Home() {
           />
         )}
       </div> */}
-      {/* <button onClick={() => setIsOpen(true)}>Dialog Open</button>
+
+      {/* when close icon available then dialogbox not close click outer side  */}
+      <button onClick={() => setIsOpen(true)} className="bg-blue-300 px-5 py-1 mr-5">Dialog ONE</button>
       <DialogBox
         isOpen={isOpen}
         onClose={() => setIsOpen(false)}
         title="Deactivate account Dialog Title"
-        showCloseIcon
         closeIcon
       >
         Are you sure you want to deactivate your account? All of your data will be permanently removed.
-      </DialogBox> */}
+      </DialogBox>
+
+      {/* when close icon not available then dialogbox close click outer side  */}
+      <button onClick={() => setIsOpenTwo(true)} className="bg-blue-500 px-5 py-1">Dialog TWO</button>
+      <DialogBox
+        isOpen={isOpenTwo}
+        onClose={() => setIsOpenTwo(false)}
+        title="Deactivate account Dialog Title"
+        closeIcon={isMobile ? true : false}
+      >
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+      </DialogBox>
     </div>
   );
 }

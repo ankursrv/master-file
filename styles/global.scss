@@ -18,6 +18,8 @@ body {
 .dotted{
       fill: rgba(128, 128, 128, 0.74);
 }
+
+// Image Responsive 
 .responsive-image-cover{
   width: 100%;
   height: 100%;
@@ -29,10 +31,23 @@ body {
   object-fit: contain;
 }
 
-// Dialog Box mobile Style Start 
-@media screen and (max-width:540px) {
-  .mobile-style{
-    left: -100%;
-  }
+// Custom Scrollbar 
+.scrollbar-theme1::-webkit-scrollbar {
+  width: 4px;
 }
-// End 
+
+.scrollbar-theme1::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-theme1::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 999px;  
+}
+
+.scrollbar-theme1::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.45);
+}
+.theme-orange::-webkit-scrollbar-thumb {
+  background: orangered;
+}
