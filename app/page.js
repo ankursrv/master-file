@@ -37,58 +37,7 @@ export default function Home() {
   const isMobile = useIsMobile ()
   return (
     <div className="container">
-      <Wishlist position="top-left" />
-      <Location
-        city="Delhi"
-        day="2D"
-      />
-      <VerifiedBadge
-        verified="Verified"
-        className="top-20 relative left-20 rounded-tl-2xl"
-      />
-
-      {/* <div className="grid grid-cols-4 gap-4 mt-10">
-        {cardData.map ((item,index)=>
-          <Card
-            key={index}
-            baseImage={item.image}
-            title={item.title}
-            city={item.city}
-            day={item.day}
-            // borderColor="border-red-500"
-            imageContainerStyle="h-[222px] rounded-xl rounded-b-none overflow-hidden"
-            superPower
-            wishlist
-            supercoin
-            variant="activityCard"
-            // cardEdges
-            verified="Verified"
-          />
-        )}
-      </div> */}
-
-      {/* when close icon available then dialogbox not close click outer side  */}
-      <button onClick={() => setIsOpen(true)} className="bg-blue-300 px-5 py-1 mr-5">Dialog ONE</button>
-      <DialogBox
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        title="Deactivate account Dialog Title"
-        closeIcon
-      >
-        Are you sure you want to deactivate your account? All of your data will be permanently removed.
-      </DialogBox>
-
-      {/* when close icon not available then dialogbox close click outer side  */}
-      <button onClick={() => setIsOpenTwo(true)} className="bg-blue-500 px-5 py-1">Dialog TWO</button>
-      <DialogBox
-        isOpen={isOpenTwo}
-        onClose={() => setIsOpenTwo(false)}
-        title="Deactivate account Dialog Title"
-        closeIcon={isMobile ? true : false}
-      >
-        Are you sure you want to deactivate your account? All of your data will be permanently removed.
-      </DialogBox>
-
+     
       
     </div>
   );
