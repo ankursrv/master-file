@@ -4,6 +4,7 @@
 
 body {
   background: whitesmoke;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -15,17 +16,49 @@ body {
   }
 }
 
-.dotted{
-      fill: rgba(128, 128, 128, 0.74);
+// NexaRust Font 
+@font-face {
+  font-family: 'NexaRust';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../public/fonts/NexaRustSlab-Trial-Black3.woff') format('woff');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'NexaRust';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/NexaRustSlab-Trial-BlackShadow3.woff') format('woff');
+  font-display: swap;
+}
+
+// Montserrat Font 
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/Montserrat-VariableFont_wght.ttf') format('ttf');
+  font-display: swap;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "NexaRust", sans-serif;
+}
+
+.dotted {
+  fill: rgba(128, 128, 128, 0.74);
 }
 
 // Image Responsive 
-.responsive-image-cover{
+.responsive-image-cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.responsive-image-contain{
+
+.responsive-image-contain {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -42,12 +75,13 @@ body {
 
 .scrollbar-theme1::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.25);
-  border-radius: 999px;  
+  border-radius: 999px;
 }
 
 .scrollbar-theme1::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.45);
 }
+
 .theme-orange::-webkit-scrollbar-thumb {
   background: orangered;
 }

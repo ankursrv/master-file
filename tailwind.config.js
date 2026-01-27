@@ -9,5 +9,9 @@ module.exports = {
   theme: {
     extend: {},
   },
+  fontFamily: {
+    primary: ["Montserrat", "sans-serif"],
+    secondary: ["NexaRust", "sans-serif"],
+  },
   plugins: [],
 }
