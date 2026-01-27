@@ -7,6 +7,7 @@ import Location from "@/components/atoms/location";
 import VerifiedBadge from "@/components/atoms/verifiedBadge";
 import useIsMobile from "@/lib/useIsMobile";
 import Typography from "@/components/molecules/typography/typography";
+import CustomAccordion from "@/components/molecules/disclosure";
 
 const cardData = [
   {
@@ -88,7 +89,7 @@ export default function Home() {
       >
         Are you sure you want to deactivate your account? All of your data will be permanently removed.
       </DialogBox>
-
+  <CustomAccordion />
       
     </div>
   );
