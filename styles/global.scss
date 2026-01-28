@@ -5,6 +5,7 @@
 body {
   background: whitesmoke;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 .container {
@@ -24,6 +25,7 @@ body {
   src: url('../public/fonts/NexaRustSlab-Trial-Black3.woff') format('woff');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'NexaRust';
   font-style: normal;
@@ -43,7 +45,9 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h5,
+h6 {
   font-family: "NexaRust", sans-serif;
 }
 
@@ -85,3 +89,213 @@ h3 {
 .theme-orange::-webkit-scrollbar-thumb {
   background: orangered;
 }
+
+// Rocksport B2B Star
+.landing-banner {
+  height: 100vh;
+  background:
+    linear-gradient(90deg,
+      rgba(17, 17, 17, 0.72) 20.71%,
+      rgba(17, 17, 17, 0) 53.8%),
+    url("/images/rocksport-b2b-images/banner/banner.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 60px;
+}
+
+.text-shadow-soft {
+  text-shadow: 0px 4px 14px 0px #11111140;
+}
+
+.activity-grid-style {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  column-gap: 24px;
+  margin-bottom: 70px;
+  width: 100%;
+
+  &>div:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    height: 428px;
+  }
+
+  &>div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1 / 2;
+    height: 225px;
+  }
+
+  &>div:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    height: 428px;
+  }
+
+  &>div:nth-child(4) {
+    grid-column: 1;
+    grid-row: 3 / 4;
+    height: 225px;
+  }
+
+  &>div:nth-child(5) {
+    grid-column: 2;
+    grid-row: 2 / 4;
+    height: 428px;
+  }
+
+  &>div:nth-child(6) {
+    grid-column: 3;
+    grid-row: 3 / 4;
+    height: 225px;
+  }
+}
+
+.activity-card-gradient {
+  background: linear-gradient(180deg, rgba(17, 17, 17, 0) 16.57%, #111111 94.33%);
+}
+
+.swiper-pagination {
+  bottom: 10px !important;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  width: 30px !important;
+  height: 4px !important;
+  border-radius: 2px !important;
+  background: #CFCEC6 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FF6B35 !important;
+  width: 80px !important;
+}
+
+.schedule-bg-image {
+  background: url("/images/rocksport-b2b-images/section-bg-pattern/pattern-2.png") #026954;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.imageBox {
+  height: 174px;
+
+  &:nth-child(1) {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+  }
+
+  &:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  &:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 36px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  border-radius: 12px;
+}
+
+.navigation-style1 {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: black;
+    background: white;
+    border-radius: 100%;
+  }
+
+  .swiper-navigation-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.playPauseButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.rotatingText {
+  animation: rotate 10s linear infinite;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px; 
+  height: 180px;
+
+  @media (min-width: 1024px) {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg); 
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.circle-text {
+  fill: #fff;
+  letter-spacing: 19px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 900;
+
+  @media (max-width: 1023px) {
+    font-size: 14px;
+    letter-spacing: 12px;
+  }
+}
+.video-overlay {
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(black, 0.4);
+    border-radius: 1rem;
+    z-index: 1;
+  }
+}
+
+// Rocksport B2B END  

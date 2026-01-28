@@ -13,7 +13,7 @@ const CustomImage = ({
       src={src}
       width={width}
       height={height}
-      alt={alt ? "" : "not found"}
+      alt={alt ? alt : "not found"}
       className={className}
       loading="eager"
     />

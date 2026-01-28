@@ -1,44 +1,27 @@
-"use client"
-import { useState } from "react";
-import Card from "@/components/organisms/card";
-import DialogBox from "@/components/organisms/dialogBox";
-import Wishlist from "@/components/atoms/wishlist";
-import Location from "@/components/atoms/location";
-import VerifiedBadge from "@/components/atoms/verifiedBadge";
-import useIsMobile from "@/lib/useIsMobile";
-import Typography from "@/components/molecules/typography/typography";
+import React from "react"
+import Header from "@/components/atoms/rocksport-b2b/header"
+import SchoolProgram from "@/components/organisms/rocksport-b2b/schoolProgram"
+import HeroBanner from "@/components/molecules/rocksport-b2b/heroBanner"
+import AdventureSchedule from "@/components/organisms/rocksport-b2b/adventureSchedule"
+import Faq from "@/components/organisms/rocksport-b2b/faq"
+import VideoCustom from "@/components/atoms/rocksport-b2b/videoCustom"
+import EssentialsSection from "@/components/molecules/rocksport-b2b/essentialsSection"
+import GainSection from "@/components/organisms/rocksport-b2b/gainSection"
 
-const cardData = [
-  {
-    image: "/images/card/card-img1.jpeg",
-    title: "Bear Grylls Survival Program-Program Survival-5 Pm to 10 Pm",
-    city: "Chennai",
-    day: "5D",
-    price: "1,000",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1761839257287-3030c9300ece?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "A card is identifiable as a single, contained unit.",
-    city: "Kolkata",
-  },
-  {
-    image: "https://images.unsplash.com/photo-1763321402439-41eb2a0c7e7b?q=80&w=696&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "A card is identifiable as a single"
-  },
-  {
-    image: "https://images.unsplash.com/photo-1763132638674-673e0ae020d6?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "A card can stand alone, without relying on surrounding elements for context."
-  },
-]
-
-export default function Home() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isOpenTwo, setIsOpenTwo] = useState(false)
-  const isMobile = useIsMobile ()
+const Home = () => {
   return (
-    <div className="container">
-     
-      
+    <div>
+      <Header />
+      <HeroBanner />
+      <SchoolProgram />
+      <AdventureSchedule />
+      <Faq />
+      <VideoCustom />
+      <EssentialsSection />
+      <GainSection />
     </div>
-  );
+  )
 }
+
+export default Home
+

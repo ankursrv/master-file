@@ -7,11 +7,21 @@ module.exports = {
     "./templates/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "theme-primary": "#f26727",
+        "baby-powder": "#FFFEF4",
+        "dreamless-sleep": "#111111",
+        "white-crest": "#f9f8ef",
+        "dark-tone-ink": "#121212",
+        "sea-nettle": "#f3763a",
+      },
+      fontFamily: {
+        primary: ["Montserrat", "sans-serif"],
+        secondary: ["NexaRust", "sans-serif"],
+      },
+    },
   },
-  fontFamily: {
-    primary: ["Montserrat", "sans-serif"],
-    secondary: ["NexaRust", "sans-serif"],
-  },
+
   plugins: [],
 }

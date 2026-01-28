@@ -1,0 +1,220 @@
+.base {
+  @apply flex items-center justify-center rounded-[90px] font-bold px-5 h-16 lg:h-16 transition-all ease-in duration-200 min-w-[165px];
+}
+
+.btnIcon {
+  @apply w-9 h-9 bg-white rounded-full -mr-1 ml-8 transition-all ease-in duration-200 flex items-center justify-center;
+
+  svg {
+    @apply scale-75 lg:scale-100 transition-all ease-in duration-200;
+  }
+}
+
+.btnStyle {
+  @apply text-base lg:text-xl leading-5 block;
+}
+
+
+
+.heroBtn {
+  @apply h-12 lg:h-16 bg-theme-primary border border-theme-primary justify-between text-base lg:text-xl pr-0;
+
+  &:hover {
+    @apply bg-transparent border-white
+  }
+
+  .btnIcon {
+    @apply h-9 w-9 lg:h-12 lg:w-12
+  }
+
+  &:hover .btnIcon {
+    @apply bg-theme-primary
+  }
+
+  &:hover svg {
+    @apply -rotate-45;
+    filter: grayscale(0) brightness(100);
+
+  }
+}
+
+.outlinePrimary {
+  @apply border border-theme-primary h-12 lg:h-[60px] pr-0;
+
+  &:hover {
+    @apply bg-theme-primary text-white
+  }
+
+  .btnIcon {
+    @apply bg-theme-primary
+  }
+
+  svg {
+    filter: grayscale(0) brightness(100);
+  }
+
+  &:hover .btnIcon {
+    @apply bg-white
+  }
+
+  &:hover svg {
+    @apply -rotate-45;
+    filter: grayscale(0);
+  }
+}
+
+.outlineWhiteBtn {
+  @apply text-white border border-white h-12 lg:h-[60px] pr-0;
+
+  &:hover {
+    @apply bg-white text-theme-primary border-theme-primary;
+
+    .btnIcon {
+      @apply bg-theme-primary;
+    }
+  }
+
+  &:hover svg {
+    @apply -rotate-45;
+    filter: grayscale(0) brightness(100);
+  }
+}
+
+//baseCampBtn
+.outline {
+  @apply h-12 border border-theme-primary pr-0;
+
+  &:hover {
+    @apply bg-theme-primary text-white
+  }
+
+  .btnStyle {
+    @apply text-base;
+  }
+
+  .btnIcon {
+    @apply bg-theme-primary w-9 h-9;
+  }
+
+  &:hover .btnIcon {
+    @apply bg-white;
+  }
+
+  svg {
+    filter: grayscale(0) brightness(100);
+  }
+
+  &:hover svg {
+    @apply -rotate-45;
+    filter: grayscale(0);
+  }
+}
+
+// Tribe card Btn 
+.fillPrimary {
+  @apply bg-theme-primary text-xl text-white border border-theme-primary;
+
+  &:hover {
+    @apply bg-transparent;
+  }
+
+  .btnStyle {
+    @apply font-bold capitalize;
+  }
+
+    &:hover svg {
+      @apply -rotate-45;
+  
+    }
+}
+
+.outlineSecondary {
+  @apply bg-transparent text-xl text-theme-primary border border-theme-primary;
+
+  &:hover {
+    @apply bg-theme-primary;
+  }
+
+  .btnStyle {
+    @apply font-bold capitalize;
+  }
+
+  &:hover .btnStyle {
+    @apply text-white;
+  }
+}
+
+// pdp 
+.download {
+  @apply border border-theme-primary h-[42px];
+
+  .btnStyle {
+    @apply font-semibold text-base capitalize;
+  }
+
+  .btnIcon {
+    @apply ml-0 mr-2 h-6 w-6;
+  }
+}
+
+.buttonDark {
+  @apply bg-black px-2 lg:px-6 h-[38px] w-fit;
+
+  .btnStyle {
+    @apply font-semibold text-[12px] lg:text-base text-white capitalize;
+  }
+}
+
+.shareNetwork {
+  @apply w-[42px] h-[42px] rounded-full flex items-center bg-black justify-center border border-red-500 min-w-0 overflow-hidden p-0;
+
+  .btnIcon {
+    @apply mx-0;
+  }
+}
+
+.styleNone {
+  @apply min-w-0 px-0 h-auto;
+
+  .btnStyle svg {
+    @apply size-4;
+  }
+
+  .btnIcon {
+    @apply m-0;
+  }
+}
+
+// Button Sizes 
+.xl {
+  @apply h-[60px] w-full;
+}
+
+.lg {
+  @apply h-12 lg:h-[60px];
+
+  .btnStyle {
+    @apply text-base lg:text-xl;
+  }
+}
+
+.md {
+  @apply h-12;
+
+  .btnStyle {
+    @apply text-base lg:text-xl;
+  }
+}
+
+
+.xs {
+  @apply h-9;
+
+  .btnStyle {
+    @apply text-sm font-normal
+  }
+}
+
+.filterBtn {
+  @apply h-[42px] font-semibold border flex items-center bg-white
+}
