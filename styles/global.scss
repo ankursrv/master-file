@@ -11,10 +11,10 @@ body {
 
 .container {
   padding-inline: 20px;
+  margin: 0 auto;
 
   @media (min-width:1400px) {
     max-width: 1280px;
-    margin: 0 auto;
   }
 }
 
@@ -158,6 +158,11 @@ h6 {
   margin-bottom: 70px;
   width: 100%;
 
+  /* Show all items on desktop */
+  &>div:nth-child(n+4) {
+    display: block;
+  }
+
   &>div:nth-child(1) {
     grid-column: 1;
     grid-row: 1 / 3;
@@ -192,6 +197,45 @@ h6 {
     grid-column: 3;
     grid-row: 3 / 4;
     height: 225px;
+  }
+
+  /* Mobile/Tablet Overrides using the project mixin (<= 991px) */
+  @include responsive(mobile-tablet-p) {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+
+    /* Specificity Boost: Double class selector (.activity-grid-style.activity-grid-style) */
+    &.activity-grid-style>div {
+      height: 300px;
+      grid-column: auto;
+      grid-row: auto;
+      order: unset;
+    }
+
+    /* Item 1: Zipline - Top, Full Width */
+    &.activity-grid-style>div:nth-child(1) {
+      grid-column: 1 / -1;
+      height: 260px;
+      order: 1;
+    }
+
+    /* Item 4: Commando Bridge - Bottom Left */
+    &.activity-grid-style>div:nth-child(4) {
+      display: block;
+      order: 2;
+    }
+
+    /* Item 2: Pottery - Bottom Right */
+    &.activity-grid-style>div:nth-child(2) {
+      order: 3;
+    }
+
+    /* Hide others */
+    &.activity-grid-style>div:nth-child(3),
+    &.activity-grid-style>div:nth-child(n+5) {
+      display: none;
+    }
   }
 }
 
@@ -230,10 +274,18 @@ h6 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
+
+  @include responsive(mobile) {
+    gap: 16px;
+  }
 }
 
 .imageBox {
   height: 174px;
+
+  @include responsive(mobile) {
+    height: 240px;
+  }
 
   &:nth-child(1) {
     grid-column: 1 / span 2;
@@ -449,4 +501,5 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
+
 // Rocksport B2B END  

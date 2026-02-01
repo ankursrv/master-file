@@ -42,7 +42,7 @@ const AdventureSchedule = () => {
           customClass="w-[211px] lg:w-[462px]"
           headingColor
         />
-        <div className="grid grid-cols-2 gap-[140px] mt-[60px]">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-[140px] mt-10 lg:mt-[60px]">
           <ScheduleTrack data={scheduleListData} />
           <ScheduleGallery
             images={scheduleImageData}

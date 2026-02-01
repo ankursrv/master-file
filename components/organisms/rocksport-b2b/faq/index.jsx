@@ -28,11 +28,25 @@ const faqData = [
   }
 ]
 
+import Link from "next/link" /* Added in case needed, but not used here */
+import SectionTitle from "@/components/atoms/rocksport-b2b/sectionTitle"
+
 const Faq = () => {
   return (
-    <section className="container py-[120px]">
-      <div className="flex justify-between gap-[143px]">
-        <div className="relative bg-theme-primary h-[529px] w-[373px] p-12 rounded-xl">
+    <section className="container py-10 lg:py-[120px]">
+      <div className="flex flex-col lg:flex-row justify-between gap-10 lg:gap-[143px]">
+        {/* Mobile Header */}
+        <div className="lg:hidden">
+          <SectionTitle
+            title="Frequently Asked Questions"
+            heading="FIND YOUR PICNIC SPOT"
+            lineFull={true}
+            className="mb-6"
+          />
+        </div>
+
+        {/* Desktop Sidebar */}
+        <div className="hidden lg:block relative bg-theme-primary h-[529px] w-[373px] p-12 rounded-xl shrink-0">
           <Typography variant="p" className="text-[35px] leading-[120%] text-white font-secondary">
             Frequently Asked Questions
           </Typography>
@@ -49,10 +63,14 @@ const Faq = () => {
             />
           </div>
         </div>
-        <CustomAccordion
-          items={faqData}
-          autoCollapse={true} 
-        />
+
+        {/* Accordion List */}
+        <div className="w-full">
+          <CustomAccordion
+            items={faqData}
+            autoCollapse={true}
+          />
+        </div>
       </div>
     </section>
   )

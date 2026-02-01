@@ -11,11 +11,11 @@ const EssentialCard = ({
   imagePosition
 }) => {
   return (
-    <div className={cn("relative overflow-hidden min-h-[500px] lg:min-h-[600px] p-8 lg:p-12 flex flex-col", bgColor)}>
+    <div className={cn("relative overflow-hidden min-h-[400px] lg:min-h-[600px] p-6 lg:p-12 flex flex-col", bgColor)}>
       <Typography
         variant="h2"
         font="secondary"
-        className="uppercase text-white mb-8"
+        className="uppercase text-white mb-6 lg:mb-8"
       >
         {title}
       </Typography>
@@ -28,7 +28,7 @@ const EssentialCard = ({
         ))}
       </div>
 
-      <div className={cn(imagePosition ? "absolute -bottom-36" : "absolute bottom-0", "left-0 right-0 w-full")}>
+      <div className={cn(imagePosition ? "absolute -bottom-20 lg:-bottom-36" : "absolute bottom-0", "left-0 right-0 w-full pointer-events-none")}>
         <CustomImage
           src={imageSrc}
           width={1000}
