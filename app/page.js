@@ -12,7 +12,7 @@ import BookingForm from "@/components/organisms/rocksport-b2b/bookingForm"
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <Header />
       <HeroBanner />
       <SchoolProgram />
@@ -23,7 +23,7 @@ const Home = () => {
       <GainSection />
       <AmenitiesSafety />
       <BookingForm />
-    </div>
+    </main>
   )
 }
 

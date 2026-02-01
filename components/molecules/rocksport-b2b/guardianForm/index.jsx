@@ -60,13 +60,13 @@ const GuardianForm = ({
             required
           />
         </div>
-      </div>      
-        <button
-          type="button"
-          className="flex items-center mt-6 text-xl font-semibold gap-2 px-10 py-4 bg-dark-tone-ink text-white rounded-full"
-        >
-          <Icons.PlusIcon /> Add More Guardian
-        </button>
+      </div>
+      <button
+        type="button"
+        className="flex items-center mt-6 text-xl font-semibold gap-2 px-10 py-4 bg-dark-tone-ink text-white rounded-full"
+      >
+        <Icons.PlusIcon aria-hidden="true" /> Add More Guardian
+      </button>
       <div className="flex justify-between pt-16">
         <Button
           variant="outlinePrimary"

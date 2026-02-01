@@ -7,15 +7,17 @@ const CustomImage = ({
   height,
   alt,
   className,
+  priority = false, ...props
 }) => {
   return (
     <Image
       src={src}
       width={width}
       height={height}
-      alt={alt ? alt : "not found"}
+      alt={alt || ""}
       className={className}
-      loading="eager"
+      priority={priority}
+      {...props}
     />
   )
 }

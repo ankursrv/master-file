@@ -21,7 +21,8 @@ const tripForm = ({
             disabled
           />
         </div>
-        <div className="grid grid-cols-3">
+        <fieldset className="grid grid-cols-3">
+          <legend className="sr-only">Select Payment Method</legend> {/* //accessibility */}
           <CustomInput
             type="radio"
             name="paymentMethod"
@@ -52,29 +53,32 @@ const tripForm = ({
             labelStyle
             focus={false}
           />
-        </div>
+        </fieldset>
       </div>
-      <div className="space-y-6 mt-6">
-        <CustomInput
-          type="checkbox"
-          name="paymentMethod"
-          value="later"
-          label="Disclaimer confirming that the participant does not have any medical condition"
-          variant="inputStyle3"
-          containerStyle="flex items-baseline flex-row-reverse justify-end gap-4"
-          labelStyle="font-normal"
-          focus={false}
-        />
-        <CustomInput
-          type="checkbox"
-          name="paymentMethod"
-          value="later"
-          label="I understand and agree to the Terms and Conditions of this adventure program, including safety guidelines, cancellation policies, and liability waivers."
-          variant="inputStyle3"
-          containerStyle="flex items-baseline flex-row-reverse justify-end gap-4"
-          labelStyle="font-normal"
-          focus={false}
-        />
+      <div className="mt-6">
+        <fieldset className="space-y-6">
+           <legend className="sr-only">Disclaimers and Terms</legend> {/* //accessibility */}
+          <CustomInput
+            type="checkbox"
+            name="paymentMethod"
+            value="later"
+            label="Disclaimer confirming that the participant does not have any medical condition"
+            variant="inputStyle3"
+            containerStyle="flex items-baseline flex-row-reverse justify-end gap-4"
+            labelStyle="font-normal"
+            focus={false}
+          />
+          <CustomInput
+            type="checkbox"
+            name="paymentMethod"
+            value="later"
+            label="I understand and agree to the Terms and Conditions of this adventure program, including safety guidelines, cancellation policies, and liability waivers."
+            variant="inputStyle3"
+            containerStyle="flex items-baseline flex-row-reverse justify-end gap-4"
+            labelStyle="font-normal"
+            focus={false}
+          />
+        </fieldset>
       </div>
       <div className="flex justify-between pt-[100px]">
         <Button

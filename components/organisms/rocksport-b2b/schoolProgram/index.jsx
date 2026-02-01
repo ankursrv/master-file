@@ -87,7 +87,7 @@ const SchoolProgram = () => {
         slidesPerView={1}
         spaceBetween={16}
         pagination={{ clickable: true }}
-        className="mt-[60px]" 
+        className="mt-[60px]"
       >
         {(slide) => (
           <div className="activity-grid-style">
@@ -98,9 +98,9 @@ const SchoolProgram = () => {
               >
                 <CustomImage
                   src={item.image}
-                  alt={item.title}
-                  width={1000}
-                  height={1000}
+                  alt={`${item.title} activity`}
+                  width={500}
+                  height={428}
                   className="responsive-image-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 activity-card-gradient" />
@@ -108,9 +108,9 @@ const SchoolProgram = () => {
                   <div className="size-11">
                     <CustomImage
                       src={item.icon}
-                      alt="activities icon"
-                      width={1000}
-                      height={1000}
+                      alt={`${item.title} icon`}
+                      width={44}
+                      height={44}
                       className="responsive-image-contain"
                     />
                   </div>

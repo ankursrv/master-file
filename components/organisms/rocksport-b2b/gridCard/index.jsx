@@ -33,8 +33,8 @@ const BaseCard = ({
       >
         <CustomImage
           src={src}
-          width={1000}
-          height={1000}
+          width={45}
+          height={45}
           alt={alt}
           className={cn(imageStyle ? imageStyle : "size-9")}
         />

@@ -8,30 +8,33 @@ const Header = () => {
         <div className="w-[180px] h-[43px]">
           <CustomImage
             src="/images/rocksport-b2b-images/header/header-logo.png"
-            width={1000}
-            height={1000}
-            alt="rocksport logo"
+            width={180}
+            height={43}
+            alt="Rocksport Logo"
             className="responsive-image-contain"
+            priority
           />
         </div>
         <div className="w-[31px]">
           <CustomImage
             src="/images/rocksport-b2b-images/header/output-onlinepngtools.png"
-            width={1000}
-            height={1000}
-            alt="rocksport logo"
+            width={31}
+            height={31}
+            alt=""
             className="responsive-image-cover"
+            priority
           />
-        </div>        
+        </div>
         <div className="w-[71px] h-[69px]">
           <CustomImage
             src="/images/rocksport-b2b-images/header/image1.png"
-            width={1000}
-            height={1000}
-            alt="rocksport logo"
+            width={71}
+            height={69}
+            alt=""
             className="responsive-image-cover"
+            priority
           />
-        </div>        
+        </div>
       </nav>
     </header>
   )

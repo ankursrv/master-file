@@ -51,7 +51,7 @@ const GainSection = () => {
             key={index}
             variant="valueCard"
             src={item.image}
-            alt="value card"
+            alt={item.title}
             title={item.title}
             description={item.description}
           />
@@ -64,12 +64,12 @@ const GainSection = () => {
         spaceBetween={20}
         sliderContainerStyle="!block md:!hidden"
       >
-        {(item,index) => (
+        {(item, index) => (
           <GridCard
             key={index}
             variant="valueCard"
             src={item.image}
-            alt="value card"
+            alt={item.title}
             title={item.title}
             description={item.description}
           />

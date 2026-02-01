@@ -9,6 +9,13 @@ body {
   overflow-x: hidden;
 }
 
+// Global Focus Styles for Accessibility
+:focus-visible {
+  outline: 3px solid #FF6B35;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
 .container {
   padding-inline: 20px;
   margin: 0 auto;
@@ -134,15 +141,6 @@ h6 {
 // Rocksport B2B Star
 .landing-banner {
   height: 100vh;
-  background:
-    linear-gradient(90deg,
-      rgba(17, 17, 17, 0.72) 20.71%,
-      rgba(17, 17, 17, 0) 53.8%),
-    url("/images/rocksport-b2b-images/banner/banner.webp");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding-bottom: 60px;
 }
 

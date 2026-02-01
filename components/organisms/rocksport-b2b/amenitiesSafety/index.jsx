@@ -57,7 +57,7 @@ const AmenitiesSafety = () => {
                 key={index}
                 variant="safetyCard"
                 src={item.image}
-                alt="safety Card"
+                alt={item.title}
                 title={item.title}
                 description={item.description}
                 imageContainerStyle="size-[84px] shrink-0 bg-theme-primary"
@@ -69,9 +69,9 @@ const AmenitiesSafety = () => {
           <div className="min-w-[445px]">
             <CustomImage
               src="/images/rocksport-b2b-images/safety-img.png"
-              width={1000}
-              height={1000}
-              alt="amenities and Safety"
+              width={445}
+              height={445}
+              alt="rocksport campsite safety"
               className="responsive-image-cover"
             />
           </div>
@@ -81,7 +81,7 @@ const AmenitiesSafety = () => {
                 key={index + midPoint}
                 variant="safetyCard"
                 src={item.image}
-                alt="safety Card"
+                alt={item.title}
                 title={item.title}
                 description={item.description}
                 imageContainerStyle="size-[84px] shrink-0 bg-theme-primary"
@@ -117,9 +117,9 @@ const AmenitiesSafety = () => {
           <div className="mt-10">
             <CustomImage
               src="/images/rocksport-b2b-images/safety-img.png"
-              width={1000}
-              height={1000}
-              alt="amenities and Safety"
+              width={350}
+              height={350}
+              alt="rocksport campsite safety mobile view"
               className="responsive-image-cover rounded-xl"
             />
           </div>
@@ -130,17 +130,17 @@ const AmenitiesSafety = () => {
       <div className="absolute bottom-0 left-0 right-0 w-full h-[196px]">
         <CustomImage
           src="/images/rocksport-b2b-images/wild.png"
-          width={1000}
-          height={1000}
-          alt="safety image"
+          width={1280}
+          height={196}
+          alt=""
           className="responsive-image-cover"
         />
       </div>
       <CustomImage
         src="images/rocksport-b2b-images/line3.svg"
-        width={1000}
-        height={1000}
-        alt="decorative line"
+        width={400}
+        height={100}
+        alt="decorative curved line"
         className="hidden lg:block absolute top-0 left-0 w-[400px] h-auto"
       />
     </section>

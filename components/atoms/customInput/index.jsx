@@ -79,6 +79,8 @@ const CustomInput = ({
           accept={accept}
           disabled={disabled}
           focus={focus}
+          aria-invalid={!!error}
+          aria-describedby={error ? `${name}-error` : undefined}
         />
 
         {InputType === "file" && (
@@ -93,7 +95,7 @@ const CustomInput = ({
       {/* Error Message */}
       {error && errorMessage && (
         <p className="mt-2 text-sm text-red-600">
-          {errorMessage}dfdfdfs
+          {errorMessage}
         </p>
       )}
     </Field>
