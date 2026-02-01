@@ -91,14 +91,14 @@ const BookingForm = () => {
 
   return (
     <section className="relative overflow-hidden booking-bg-image">
-      <div className="relative z-10 container h-full flex justify-between py-20">
+      <div className="relative z-10 container h-full flex flex-col lg:flex-row lg:justify-between py-20 gap-10">
         {/* Left Component - Step Indicator */}
         <BookingIndicator
           steps={steps}
           currentStep={currentStep}
         />
         {/* Form Content */}
-        <div className="w-[785px]">
+        <div className="w-full lg:w-[785px]">
           {currentStep === 1 && (
             <ParticipantForm
               formData={formData}

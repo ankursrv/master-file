@@ -10,8 +10,9 @@ const BookingIndicator = ({ currentStep }) => {
   ]
 
   return (
-    <div className="w-[400px]">
-      <div className="text-white mb-12">
+    <div className="w-full lg:w-[400px]">
+      {/* Header - Hidden on Mobile */}
+      <div className="hidden lg:block text-white mb-12">
         <Typography variant="h5" font="secondary" className="uppercase">
           BOOKING FORM
         </Typography>
@@ -20,8 +21,52 @@ const BookingIndicator = ({ currentStep }) => {
         </p>
       </div>
 
-      {/* Steps */}
-      <div className="space-y-0">
+      {/* Mobile Horizontal Steps */}
+      <div className="flex lg:hidden justify-between items-start mb-8">
+        {steps.map((step, index) => {
+          const stepNumber = index + 1
+          const isActive = currentStep === stepNumber
+          const isCompleted = currentStep > stepNumber
+
+          return (
+            <div key={index} className="flex flex-col items-center flex-1">
+              <div className="flex items-center w-full">
+                {/* Circle */}
+                <div
+                  className={cn(
+                    "size-12 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 bg-baby-powder border-2 mx-auto",
+                    isActive && "text-theme-primary border-theme-primary",
+                    isCompleted && "text-theme-primary border-theme-primary",
+                    !isActive && !isCompleted && "text-stamped-concrete border-stamped-concrete"
+                  )}
+                >
+                  {step.number}
+                </div>
+                {/* Horizontal Line */}
+                {index < steps.length - 1 && (
+                  <div className="flex-1 h-[2px] bg-stamped-concrete relative">
+                    {isCompleted && (
+                      <div className="absolute inset-0 bg-theme-primary" />
+                    )}
+                  </div>
+                )}
+              </div>
+              {/* Step Text */}
+              <div className="text-center mt-2">
+                <p className={cn("text-xs font-semibold", isActive ? "text-white" : "text-white/60")}>
+                  {step.title}
+                </p>
+                <p className={cn("text-xs font-semibold", isActive ? "text-white" : "text-white/60")}>
+                  {step.subtitle}
+                </p>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+
+      {/* Desktop Vertical Steps */}
+      <div className="hidden lg:block space-y-0">
         {steps.map((step, index) => {
           const stepNumber = index + 1
           const isActive = currentStep === stepNumber

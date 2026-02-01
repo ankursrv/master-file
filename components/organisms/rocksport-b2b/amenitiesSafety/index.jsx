@@ -92,26 +92,37 @@ const AmenitiesSafety = () => {
           </div>
         </div>
         {/* Mobile Layout */}
-        <div className="block lg:hidden">
+        <div className="block lg:hidden mt-10">
           <CustomSlider
             items={safetyCardData}
             slidesPerView={1.4}
             spaceBetween={20}
             sliderContainerStyle=""
+            className="h-auto"
           >
             {(item) => (
-                <GridCard
-                  variant="safetyCard"
-                  src={item.image}
-                  alt={item.title}
-                  title={item.title}
-                  description={item.description}
-                  imageContainerStyle="size-[84px] shrink-0 bg-theme-primary"
-                  imageStyle="size-[45px]"
-                  cardVariantStyle="secondary"
-                />
+              <GridCard
+                variant="safetyCard"
+                src={item.image}
+                alt={item.title}
+                title={item.title}
+                description={item.description}
+                imageContainerStyle="size-[84px] shrink-0 bg-theme-primary"
+                imageStyle="size-[45px]"
+                cardVariantStyle="secondary"
+              />
             )}
           </CustomSlider>
+          {/* Safety Image on Mobile */}
+          <div className="mt-10">
+            <CustomImage
+              src="/images/rocksport-b2b-images/safety-img.png"
+              width={1000}
+              height={1000}
+              alt="amenities and Safety"
+              className="responsive-image-cover rounded-xl"
+            />
+          </div>
         </div>
       </div>
       {/* Background Pattern Image  */}

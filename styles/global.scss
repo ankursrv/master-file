@@ -408,7 +408,11 @@ h6 {
 
 .booking-bg-image {
   position: relative;
-  height: 685px;
+  min-height: auto;
+
+  @media (min-width: 1024px) {
+    height: 685px;
+  }
 
   &::before {
     content: "";
