@@ -92,14 +92,14 @@ const VideoCustom = ({
         width={1000}
         height={1000}
         alt="decorative line"
-        className="absolute -top-[65px] left-0 z-50 w-[245px] h-auto"
+        className="absolute -top-[65px] left-0 w-[245px] h-auto"
       />
       <CustomImage
         src="images/rocksport-b2b-images/line2.svg"
         width={1000}
         height={1000}
         alt="decorative line"
-        className="absolute -top-[12rem] right-0 z-50 w-[221px] h-auto"
+        className="absolute -top-[12rem] right-0 -z-10 w-[221px] h-auto"
       />
     </section>
   );

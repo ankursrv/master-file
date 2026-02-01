@@ -7,6 +7,8 @@ import Faq from "@/components/organisms/rocksport-b2b/faq"
 import VideoCustom from "@/components/atoms/rocksport-b2b/videoCustom"
 import EssentialsSection from "@/components/molecules/rocksport-b2b/essentialsSection"
 import GainSection from "@/components/organisms/rocksport-b2b/gainSection"
+import AmenitiesSafety from "@/components/organisms/rocksport-b2b/amenitiesSafety"
+import BookingForm from "@/components/organisms/rocksport-b2b/bookingForm"
 
 const Home = () => {
   return (
@@ -19,6 +21,8 @@ const Home = () => {
       <VideoCustom />
       <EssentialsSection />
       <GainSection />
+      <AmenitiesSafety />
+      <BookingForm />
     </div>
   )
 }

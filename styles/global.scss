@@ -1,10 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "mixins";
 
 body {
   background: whitesmoke;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Panton", sans-serif;
   overflow-x: hidden;
 }
 
@@ -17,29 +18,69 @@ body {
   }
 }
 
-// NexaRust Font 
+/*==== Panton Font here ======= */
 @font-face {
-  font-family: 'NexaRust';
+  font-family: "Panton";
+  src: url("/fonts/panton-thin.otf") format("opentype");
+  font-weight: 100;
   font-style: normal;
-  font-weight: normal;
-  src: url('../public/fonts/NexaRustSlab-Trial-Black3.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'NexaRust';
+  font-family: "Panton";
+  src: url("/fonts/panton-light.otf") format("opentype");
+  font-weight: 300;
   font-style: normal;
-  font-weight: normal;
-  src: url('/public/fonts/NexaRustSlab-Trial-BlackShadow3.woff') format('woff');
   font-display: swap;
 }
 
-// Montserrat Font 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "Panton";
+  src: url("/fonts/panton-regular.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("/fonts/panton-semi-bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("/fonts/panton-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("/fonts/panton-black.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("/fonts/panton-extra-black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*==== Nexa Rust Sans Font here ======= */
+@font-face {
+  font-family: "NexaRust";
+  src: url("/fonts/NexaRustSansBlack2.ttf") format("truetype");
   font-weight: normal;
-  src: url('/public/fonts/Montserrat-VariableFont_wght.ttf') format('ttf');
+  font-style: normal;
   font-display: swap;
 }
 
@@ -253,7 +294,7 @@ h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 180px; 
+  width: 180px;
   height: 180px;
 
   @media (min-width: 1024px) {
@@ -264,7 +305,7 @@ h6 {
 
 @keyframes rotate {
   from {
-    transform: translate(-50%, -50%) rotate(0deg); 
+    transform: translate(-50%, -50%) rotate(0deg);
   }
 
   to {
@@ -284,6 +325,7 @@ h6 {
     letter-spacing: 12px;
   }
 }
+
 .video-overlay {
   &::before {
     position: absolute;
@@ -298,4 +340,113 @@ h6 {
   }
 }
 
+.epic-pattern {
+  background: url("/images/rocksport-b2b-images/epic-pattern.png") no-repeat center/cover;
+  height: 147px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  @include responsive(mobile) {
+    background-size: 200%;
+    top: -32px;
+  }
+}
+
+.booking-bg-image {
+  position: relative;
+  height: 685px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/images/rocksport-b2b-images/booking-bg.jpg") no-repeat center/cover;
+    filter: grayscale(100%) brightness(0.4);
+    z-index: 0;
+  }
+}
+
+input[type="file"]::file-selector-button {
+  display: none;
+}
+
+input[type="file"] {
+  color: transparent;
+}
+
+/* =========================
+   CUSTOM RADIO BUTTON
+========================= */
+
+/* Remove native appearance */
+/* ===== Radio Buttons ===== */
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #606060;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #F36523;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+input[type="radio"]:checked {
+  border-color: #F36523;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+/* ===== Checkboxes ===== */
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 1px solid #111111B2;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #F36523;
+  border-color: #F36523;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
 // Rocksport B2B END  

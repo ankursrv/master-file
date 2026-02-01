@@ -52,6 +52,7 @@ const Button = forwardRef(
       btnIconStyle,
       childStyle,
       iconPosition = "right",
+      onClick,
       ...props
     },
     ref
@@ -66,6 +67,7 @@ const Button = forwardRef(
         disabled={disabled}
         aria-label={ariaLabel}
         title={buttonTitle}
+        onClick={onClick}
         {...props}
       >
         {/* Icon Left */}
