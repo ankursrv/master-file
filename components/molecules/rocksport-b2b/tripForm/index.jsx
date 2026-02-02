@@ -2,25 +2,24 @@ import React from "react"
 import { Button } from "@/components/atoms/rocksport-b2b/button"
 import CustomInput from "@/components/atoms/customInput"
 
-const tripForm = ({
+const TripForm = ({
   formData,
   onChange,
   onSubmit,
-  onBack
+  onBack,
 }) => {
-
   return (
     <div className="w-full bg-baby-powder rounded-xl p-8">
       <div className="space-y-6 bg-decorator-white p-5 rounded-2xl">
-        <div className="grid grid-cols-1 gap-6">
-          <CustomInput
-            label="Trip Date"
-            type="text"
-            name="guardianName"
-            placeholder="15 October 2025"
-            disabled
-          />
-        </div>
+        <CustomInput
+          label="Trip Date"
+          type="text"
+          name="tripDate"
+          placeholder="15 October 2025"
+          disabled
+        />
+
+        {/* Payment Method */}
         <fieldset className="grid grid-cols-3">
           <legend className="sr-only">Select Payment Method</legend> {/* //accessibility */}
           <CustomInput
@@ -28,26 +27,34 @@ const tripForm = ({
             name="paymentMethod"
             value="online"
             label="Pay Online"
+            onChange={onChange}
+            checked={formData.paymentMethod === "online"}
             variant="inputStyle3"
             containerStyle="flex items-center flex-row-reverse justify-end gap-2"
             labelStyle
             focus={false}
           />
+
           <CustomInput
             type="radio"
             name="paymentMethod"
             value="atSchool"
             label="Pay At School"
+            onChange={onChange}
+            checked={formData.paymentMethod === "atSchool"}
             variant="inputStyle3"
             containerStyle="flex items-center flex-row-reverse justify-end gap-2"
             labelStyle
             focus={false}
           />
+
           <CustomInput
             type="radio"
             name="paymentMethod"
             value="later"
-            label="Pay At School"
+            label="Pay Later"
+            onChange={onChange}
+            checked={formData.paymentMethod === "later"}
             variant="inputStyle3"
             containerStyle="flex items-center flex-row-reverse justify-end gap-2"
             labelStyle
@@ -55,24 +62,30 @@ const tripForm = ({
           />
         </fieldset>
       </div>
+
+      {/* Disclaimers */}
       <div className="mt-6">
         <fieldset className="space-y-6">
-           <legend className="sr-only">Disclaimers and Terms</legend> {/* //accessibility */}
+          <legend className="sr-only">Disclaimers and Terms</legend>
+
           <CustomInput
             type="checkbox"
-            name="paymentMethod"
-            value="later"
+            name="disclaimerAccepted"
             label="Disclaimer confirming that the participant does not have any medical condition"
+            onChange={onChange}
+            checked={formData.disclaimerAccepted}
             variant="inputStyle3"
             containerStyle="flex items-baseline flex-row-reverse justify-end gap-4"
             labelStyle="font-normal"
             focus={false}
           />
+
           <CustomInput
             type="checkbox"
-            name="paymentMethod"
-            value="later"
-            label="I understand and agree to the Terms and Conditions of this adventure program, including safety guidelines, cancellation policies, and liability waivers."
+            name="termsAccepted"
+            label="I understand and agree to the Terms and Conditions"
+            onChange={onChange}
+            checked={formData.termsAccepted}
             variant="inputStyle3"
             containerStyle="flex items-baseline flex-row-reverse justify-end gap-4"
             labelStyle="font-normal"
@@ -80,6 +93,7 @@ const tripForm = ({
           />
         </fieldset>
       </div>
+
       <div className="flex justify-between pt-[100px]">
         <Button
           variant="outlinePrimary"
@@ -91,7 +105,11 @@ const tripForm = ({
           variant="fillPrimary"
           onClick={onSubmit}
           className="px-12"
-          disabled={!formData.payAtSchool || !formData.payOption}
+          disabled={
+            !formData.paymentMethod ||
+            !formData.disclaimerAccepted ||
+            !formData.termsAccepted
+          }
         >
           Submit
         </Button>
@@ -100,4 +118,4 @@ const tripForm = ({
   )
 }
 
-export default tripForm
+export default TripForm

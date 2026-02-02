@@ -23,7 +23,8 @@ const CustomInput = ({
   inputContainer,
   accept,
   disabled,
-  focus = true
+  focus = true,
+  checked,
 }) => {
   const inputStyles = {
     inputStyle1: "border border-dark-tone-ink/15 bg-baby-powder py-3 px-6",
@@ -81,6 +82,7 @@ const CustomInput = ({
           focus={focus}
           aria-invalid={!!error}
           aria-describedby={error ? `${name}-error` : undefined}
+          checked={checked}
         />
 
         {InputType === "file" && (
