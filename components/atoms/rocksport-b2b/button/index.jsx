@@ -53,6 +53,7 @@ const Button = forwardRef(
       childStyle,
       iconPosition = "right",
       onClick,
+      type = "button",
       ...props
     },
     ref
@@ -68,18 +69,29 @@ const Button = forwardRef(
         aria-label={ariaLabel}
         title={buttonTitle}
         onClick={onClick}
+        type={type}
         {...props}
       >
         {/* Icon Left */}
         {icon && iconPosition === "left" && (
-          <div className={cn(styles.btnIcon, btnIconStyle)}>{icon}</div>
+          <div
+            className={cn(styles.btnIcon, btnIconStyle)}
+            aria-hidden="true"
+          >
+            {icon}
+          </div>
         )}
 
         <span className={cn(styles.btnStyle, childStyle)}>{children}</span>
 
         {/* Icon Right */}
         {icon && iconPosition === "right" && (
-          <div className={cn(styles.btnIcon, btnIconStyle)}>{icon}</div>
+          <div
+            className={cn(styles.btnIcon, btnIconStyle)}
+            aria-hidden="true"
+          >
+            {icon}
+          </div>
         )}
       </button>
     );

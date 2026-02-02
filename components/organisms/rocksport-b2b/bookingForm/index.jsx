@@ -5,6 +5,7 @@ import ParticipantForm from "@/components/molecules/rocksport-b2b/participantFor
 import BookingIndicator from "@/components/molecules/rocksport-b2b/bookingIndicator"
 import TripForm from "@/components/molecules/rocksport-b2b/tripForm"
 import GuardianForm from "@/components/molecules/rocksport-b2b/guardianForm"
+import { cn } from "@/lib/utils"
 
 const BookingForm = () => {
   const [currentStep, setCurrentStep] = useState(1)
@@ -19,31 +20,57 @@ const BookingForm = () => {
     dateOfBirth: "",
     idProof: null,
 
-    // Guardian Details
-    guardianType: "",
-    guardianName: "",
-    guardianContact: "",
-    guardianEmail: "",
-
-    // T-Shirt Details
-    tshirtSize: "",
-    payOption: "",
-    payAtSchool: false,
+    // Guardian Details - Now as an array
+    guardians: [
+      {
+        guardianType: "",
+        guardianName: "",
+        guardianContact: "",
+        guardianEmail: "",
+      }
+    ]
   })
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e, guardianIndex = null) => {
     const { name, value, type, checked } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }))
+
+    // If guardianIndex is provided, update specific guardian
+    if (guardianIndex !== null) {
+      setFormData(prev => ({
+        ...prev,
+        guardians: prev.guardians.map((guardian, index) =>
+          index === guardianIndex
+            ? { ...guardian, [name]: type === 'checkbox' ? checked : value }
+            : guardian
+        )
+      }))
+    } else {
+      // Regular field update
+      setFormData(prev => ({
+        ...prev,
+        [name]: type === 'checkbox' ? checked : value
+      }))
+    }
   }
 
-  const handleSelectChange = (name, value) => {
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
+  const handleSelectChange = (name, value, guardianIndex = null) => {
+    // If guardianIndex is provided, update specific guardian
+    if (guardianIndex !== null) {
+      setFormData(prev => ({
+        ...prev,
+        guardians: prev.guardians.map((guardian, index) =>
+          index === guardianIndex
+            ? { ...guardian, [name]: value }
+            : guardian
+        )
+      }))
+    } else {
+      // Regular field update
+      setFormData(prev => ({
+        ...prev,
+        [name]: value
+      }))
+    }
   }
 
   const handleFileChange = (e, fieldName) => {
@@ -51,6 +78,30 @@ const BookingForm = () => {
     setFormData(prev => ({
       ...prev,
       [fieldName]: file
+    }))
+  }
+
+  // Add new guardian
+  const handleAddGuardian = () => {
+    setFormData(prev => ({
+      ...prev,
+      guardians: [
+        ...prev.guardians,
+        {
+          guardianType: "",
+          guardianName: "",
+          guardianContact: "",
+          guardianEmail: "",
+        }
+      ]
+    }))
+  }
+
+  // Remove guardian by index
+  const handleRemoveGuardian = (index) => {
+    setFormData(prev => ({
+      ...prev,
+      guardians: prev.guardians.filter((_, i) => i !== index)
     }))
   }
 
@@ -71,30 +122,15 @@ const BookingForm = () => {
     // Yahan API call ya submission logic add karo
   }
 
-  const steps = [
-    {
-      number: 1,
-      title: "Participant Details",
-      subtitle: "Fill in Participant form and proceed"
-    },
-    {
-      number: 2,
-      title: "Guardian Details",
-      subtitle: "Fill in Guardian form and proceed"
-    },
-    {
-      number: 3,
-      title: "T-Shirt & Payment Details",
-      subtitle: "Select size and complete payment"
-    }
-  ]
+  const hasMultipleGuardians = formData.guardians.length > 1
 
   return (
-    <section className="relative overflow-hidden booking-bg-image">
+    <section className={cn("relative overflow-hidden booking-bg-image",
+      currentStep === 2 && hasMultipleGuardians ? "h-full" : "h-[685px]")}
+    >
       <div className="relative z-10 container h-full flex flex-col lg:flex-row lg:justify-between py-20 gap-10">
         {/* Left Component - Step Indicator */}
         <BookingIndicator
-          steps={steps}
           currentStep={currentStep}
         />
         {/* Form Content */}
@@ -114,6 +150,8 @@ const BookingForm = () => {
               formData={formData}
               onChange={handleInputChange}
               onSelectChange={handleSelectChange}
+              onAddGuardian={handleAddGuardian}
+              onRemoveGuardian={handleRemoveGuardian}
               onNext={handleNext}
               onBack={handleBack}
             />

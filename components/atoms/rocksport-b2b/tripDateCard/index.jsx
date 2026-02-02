@@ -10,7 +10,7 @@ const TripDateCard = () => {
         <div className="flex items-center gap-2">
           <Icons.CalenderIcon />
           <Typography variant="p" className="text-xl md:text-2xl font-semibold text-white whitespace-nowrap">
-            TRIP DATE :
+            TRIP DATE 
           </Typography>
         </div>
         <Typography variant="h5" className="text-xl md:text-3xl" font="secondary">

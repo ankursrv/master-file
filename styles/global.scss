@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import "mixins";
 
 body {
@@ -406,11 +407,6 @@ h6 {
 
 .booking-bg-image {
   position: relative;
-  min-height: auto;
-
-  @media (min-width: 1024px) {
-    height: 685px;
-  }
 
   &::before {
     content: "";
