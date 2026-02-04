@@ -85,9 +85,8 @@ const TestimonialsSection = () => {
               className="h-full"
             >
               {(item) => (
-                <div className="bg-dark-tone-ink/60 backdrop-blur-sm rounded-xl overflow-hidden h-full flex flex-col">
-                  {/* Activity Image */}
-                  <div className="relative aspect-square h-[374px]">
+                <div className="bg-dark-tone-ink/60 backdrop-blur-sm rounded-xl overflow-hidden h-full flex flex-col">                  
+                  <div className="relative w-[413px] h-[374px]">
                     <CustomImage
                       src={item.image}
                       width={1000}
@@ -99,9 +98,7 @@ const TestimonialsSection = () => {
                   </div>
                   <div className="p-6 relative border border-white/40 border-t-0 rounded-xl rounded-t-none">
                     <div className="absolute -top-8 right-7">
-                      <svg width="65" height="65" viewBox="0 0 48 38" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-white">
-                        <path d="M19.2 0H0V19.2H9.6C9.6 24.5 5.3 28.8 0 28.8V38.4C10.6 38.4 19.2 29.8 19.2 19.2V0ZM48 0H28.8V19.2H38.4C38.4 24.5 34.1 28.8 28.8 28.8V38.4C39.4 38.4 48 29.8 48 19.2V0Z" fill="currentColor" />
-                      </svg>
+                     <Icons.Quatation />
                     </div>
                     <div className="flex items-center gap-5">
                       <div className="size-[60px] rounded-full overflow-hidden border-2 border-white flex-shrink-0">
@@ -110,7 +107,7 @@ const TestimonialsSection = () => {
                           alt={item.name}
                           width={60}
                           height={60}
-                          className="object-cover"
+                          className="responsive-image-cover"
                         />
                       </div>
                       <div>

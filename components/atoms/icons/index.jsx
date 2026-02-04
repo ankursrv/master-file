@@ -215,6 +215,23 @@ const Icons = {
     </svg>
   ),
 
+  Quatation: (props) => (
+    <svg
+      width="65"
+      height="65"
+      viewBox="0 0 48 38"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="text-white"
+      {...props}
+    >
+      <path
+        d="M19.2 0H0V19.2H9.6C9.6 24.5 5.3 28.8 0 28.8V38.4C10.6 38.4 19.2 29.8 19.2 19.2V0ZM48 0H28.8V19.2H38.4C38.4 24.5 34.1 28.8 28.8 28.8V38.4C39.4 38.4 48 29.8 48 19.2V0Z"
+        fill="currentColor"
+      />
+    </svg>
+  ),
+
 
 
 
