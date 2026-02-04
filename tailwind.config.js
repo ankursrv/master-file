@@ -27,6 +27,9 @@ module.exports = {
       backgroundImage: {
         "testimonial-gradient":
           "linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 100%)",
+        "fade-right": "linear-gradient(90deg, rgba(17, 17, 17, 0.72) 20.71%, rgba(17, 17, 17, 0) 53.8%)",
+        "fade-down": "linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 100%)",
+
       },
       fontSize:{
         "xxl":"1.75rem", //28px

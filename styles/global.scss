@@ -140,6 +140,10 @@ h6 {
 }
 
 // Rocksport B2B Star
+.bg-image {
+  background: url(/images/rocksport-b2b-images/bg.webp) no-repeat 50% / cover fixed, #fffef4;
+}
+
 .landing-banner {
   height: 100vh;
   padding-bottom: 60px;
@@ -283,8 +287,8 @@ h6 {
   height: 174px;
 
   @include responsive(tablet) {
-      height: auto;
-    }
+    height: auto;
+  }
 
   @include responsive(mobile) {
     height: 182px;
@@ -346,15 +350,15 @@ h6 {
   animation: rotate 10s linear infinite;
   pointer-events: none;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 48%;
+  left: 52%;
   transform: translate(-50%, -50%);
-  width: 180px;
-  height: 180px;
+  width: 260px;
+  height: 260px;
 
-  @media (min-width: 1024px) {
-    width: 260px;
-    height: 260px;
+  @include responsive(mobile-tablet-p) {
+    width: 120px;
+    height: 120px;
   }
 }
 
@@ -374,10 +378,11 @@ h6 {
   text-transform: uppercase;
   font-size: 20px;
   font-weight: 900;
+  letter-spacing: 21px;
 
   @media (max-width: 1023px) {
-    font-size: 14px;
-    letter-spacing: 12px;
+    // font-size: 14px;
+    // letter-spacing: 12px;
   }
 }
 

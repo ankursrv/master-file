@@ -42,7 +42,7 @@ const AmenitiesSafety = () => {
   const leftCards = safetyCardData.slice(0, midPoint)
   const rightCards = safetyCardData.slice(midPoint)
   return (
-    <section className="relative">
+    <section className="relative bg-image">
       <div className="container pt-20">
         <SectionTitle
           title="Amenities & Safety"

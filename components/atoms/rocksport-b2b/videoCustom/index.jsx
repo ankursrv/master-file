@@ -99,7 +99,7 @@ const VideoCustom = ({
         width={1000}
         height={1000}
         alt="decorative line"
-        className="hidden lg:block absolute -top-[12rem] right-0 -z-10 w-[221px] h-auto"
+        className="hidden lg:block absolute -top-[12rem] right-0 w-[221px] h-auto"
       />
     </section>
   );

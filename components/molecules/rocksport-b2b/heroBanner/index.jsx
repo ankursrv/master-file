@@ -13,7 +13,7 @@ const HeroBanner = () => {
         priority
         className="object-cover -z-10"        
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#111111B8] via-[#111111B8] to-transparent -z-10" />
+      <div className="absolute bottom-0 w-full h-1/2 md:h-full bg-fade-down md:bg-fade-right" />
 
       <div className="container flex flex-col justify-end h-full relative z-10">
         <div className="w-full md:w-[589px]">

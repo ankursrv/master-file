@@ -38,7 +38,8 @@ const GainSection = () => {
     },
   ]
   return (
-    <section className="container pb-[100px]">
+    <section className="bg-image py-section">
+      <div className="container">
       <SectionTitle
         title="What You’ll Gain"
         heading="Why Adventure Matters"
@@ -75,6 +76,7 @@ const GainSection = () => {
           />
         )}
       </CustomSlider>
+      </div>
     </section>
   )
 }

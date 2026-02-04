@@ -33,8 +33,8 @@ import SectionTitle from "@/components/atoms/rocksport-b2b/sectionTitle"
 
 const Faq = () => {
   return (
-    <section className="container py-10 lg:py-section1">
-      <div className="flex flex-col lg:flex-row justify-between gap-11 lg:gap-[143px]">
+    <section className="bg-image py-10 lg:py-section1">
+      <div className="container flex flex-col lg:flex-row justify-between gap-11 lg:gap-[143px]">
         {/* Mobile Header */}
         <div className="lg:hidden">
           <SectionTitle

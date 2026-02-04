@@ -18,7 +18,7 @@ const EssentialsSection = () => {
   ]
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 mb-20">
+    <section className="grid grid-cols-1 lg:grid-cols-2">
       <EssentialCard
         title="Pre-requisite"
         items={prerequisiteItems}

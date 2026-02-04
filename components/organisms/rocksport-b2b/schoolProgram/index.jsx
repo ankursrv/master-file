@@ -75,54 +75,56 @@ const slides = [
 
 const SchoolProgram = () => {
   return (
-    <section className="py-10 md:py-section container">
-      <SectionTitle
-        title="Know about the In-school Program"
-        heading="Program Highlights"
-        customClass="w-[211px] md:w-[462px]"
-      />
+    <section className="py-10 md:py-section bg-image">
+      <div className="container">
+        <SectionTitle
+          title="Know about the In-school Program"
+          heading="Program Highlights"
+          customClass="w-[211px] md:w-[462px]"
+        />
 
-      <CustomSlider
-        items={slides}
-        slidesPerView={1}
-        spaceBetween={16}
-        pagination={{ clickable: true }}
-        className="mt-11 md:mt-60px"
-      >
-        {(slide) => (
-          <div className="activity-grid-style">
-            {slide.activities.map((item, index) => (
-              <div
-                key={index}
-                className="group relative rounded-xl md:rounded-3xl overflow-hidden cursor-pointer"
-              >
-                <CustomImage
-                  src={item.image}
-                  alt={`${item.title} activity`}
-                  width={500}
-                  height={428}
-                  className="responsive-image-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 activity-card-gradient" />
-                <div className="absolute bottom-4 left-2 md:left-4 flex items-center gap-2 md:gap-3">
-                  <div className="size-8 md:size-11 shrink-0">
-                    <CustomImage
-                      src={item.icon}
-                      alt={`${item.title} icon`}
-                      width={44}
-                      height={44}
-                      className="responsive-image-contain"
-                    />
+        <CustomSlider
+          items={slides}
+          slidesPerView={1}
+          spaceBetween={16}
+          pagination={{ clickable: true }}
+          className="mt-11 md:mt-60px"
+        >
+          {(slide) => (
+            <div className="activity-grid-style">
+              {slide.activities.map((item, index) => (
+                <div
+                  key={index}
+                  className="group relative rounded-xl md:rounded-3xl overflow-hidden cursor-pointer"
+                >
+                  <CustomImage
+                    src={item.image}
+                    alt={`${item.title} activity`}
+                    width={500}
+                    height={428}
+                    className="responsive-image-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 activity-card-gradient" />
+                  <div className="absolute bottom-4 left-2 md:left-4 flex items-center gap-2 md:gap-3">
+                    <div className="size-8 md:size-11 shrink-0">
+                      <CustomImage
+                        src={item.icon}
+                        alt={`${item.title} icon`}
+                        width={44}
+                        height={44}
+                        className="responsive-image-contain"
+                      />
+                    </div>
+                    <Typography variant="h6" font="secondary">
+                      {item.title}
+                    </Typography>
                   </div>
-                  <Typography variant="h6" font="secondary">
-                    {item.title}
-                  </Typography>
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </CustomSlider>
+              ))}
+            </div>
+          )}
+        </CustomSlider>
+      </div>
     </section>
   )
 }

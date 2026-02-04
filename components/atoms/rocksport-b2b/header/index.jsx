@@ -4,8 +4,8 @@ import CustomImage from "@/components/molecules/customImage"
 const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <nav className="flex items-center justify-center bg-black/60 gap-7 py-4">
-        <div className="w-[180px] h-[43px]">
+      <nav className="flex items-center justify-center h-[50px] md:h-20 bg-dark-tone-ink md:bg-black/60 gap-4 md:gap-7">
+        <div className="w-[130px] md:w-[180px] h-[30px] md:h-[43px]">
           <CustomImage
             src="/images/rocksport-b2b-images/header/header-logo.png"
             width={180}
@@ -15,7 +15,7 @@ const Header = () => {
             priority
           />
         </div>
-        <div className="w-[31px]">
+        <div className="size-5 md:w-[31px]">
           <CustomImage
             src="/images/rocksport-b2b-images/header/output-onlinepngtools.png"
             width={31}
@@ -25,7 +25,7 @@ const Header = () => {
             priority
           />
         </div>
-        <div className="w-[71px] h-[69px]">
+        <div className="w-[31px] md:w-[71px] h-[30px] md:h-[69px]">
           <CustomImage
             src="/images/rocksport-b2b-images/header/image1.png"
             width={71}
