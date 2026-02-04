@@ -9,6 +9,7 @@ import EssentialsSection from "@/components/molecules/rocksport-b2b/essentialsSe
 import GainSection from "@/components/organisms/rocksport-b2b/gainSection"
 import AmenitiesSafety from "@/components/organisms/rocksport-b2b/amenitiesSafety"
 import BookingForm from "@/components/organisms/rocksport-b2b/bookingForm"
+import Testimonials from "@/components/organisms/rocksport-b2b/testimonials"
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <GainSection />
       <AmenitiesSafety />
       <BookingForm />
+      <Testimonials />
     </main>
   )
 }

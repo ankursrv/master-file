@@ -418,6 +418,26 @@ h6 {
   }
 }
 
+.testimonial-bg-image {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(291.33deg,
+        #111111 0.26%,
+        rgba(17, 17, 17, 0.08) 36.27%,
+        rgba(17, 17, 17, 0.08) 68.16%,
+        #111111 99.74%),
+      url("/images/rocksport-b2b-images/booking-bg.jpg") center/cover no-repeat;
+    filter: brightness(0.4);
+    z-index: 0;
+  }
+
+}
+
 input[type="file"]::file-selector-button {
   display: none;
 }
@@ -499,5 +519,20 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
+
+// // Testimonial Navigation Style on Mobile 
+// .testimonial-navigation {
+
+//   .swiper-button-prev,
+//   .swiper-button-next {
+//     // margin-top: 2rem !important;
+//     // position: relative;
+//     // top: 10rem  !important;
+//   }
+//     .swiper-button-next {
+//       // right: 100%;
+//     }
+// }
+
 
 // Rocksport B2B END  

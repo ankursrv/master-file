@@ -24,6 +24,10 @@ module.exports = {
         primary: ["Panton", "sans-serif"],
         secondary: ["NexaRust", "sans-serif"],
       },
+      backgroundImage: {
+        "testimonial-gradient":
+          "linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 100%)",
+      },
     },
   },
 
