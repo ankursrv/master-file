@@ -1,9 +1,9 @@
 .base {
-  @apply flex items-center justify-center rounded-[90px] font-bold px-5 h-16 lg:h-16 transition-all ease-in duration-200 min-w-[150px];
+  @apply flex items-center justify-center rounded-[90px] font-bold px-5 h-12 lg:h-16 transition-all ease-in duration-200 min-w-[150px];
 }
 
 .btnIcon {
-  @apply w-9 h-9 bg-white rounded-full -mr-1 ml-8 transition-all ease-in duration-200 flex items-center justify-center;
+  @apply w-9 h-9 bg-white rounded-full -mr-3 md:-mr-3 lg:-mr-2 ml-8 transition-all ease-in duration-200 flex items-center justify-center;
 
   svg {
     @apply scale-75 lg:scale-100 transition-all ease-in duration-200;

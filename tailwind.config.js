@@ -28,6 +28,22 @@ module.exports = {
         "testimonial-gradient":
           "linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 100%)",
       },
+      fontSize:{
+        "xxl":"1.75rem", //28px
+        "3xxl": "2rem", //32px
+        "4xxl": "2.5rem", //40px
+      },
+      margin:{
+        "6px":"6px",
+        "60px": "60px",
+      },
+      padding:{
+        "section" : "100px",
+        "section1": "120px",
+      },
+      gap:{
+      "140": "140px",
+      },
     },
   },
 

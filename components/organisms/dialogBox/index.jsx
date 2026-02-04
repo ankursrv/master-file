@@ -18,9 +18,9 @@ const DialogBox = ({
   }
   return (
     <Dialog open={isOpen} onClose={handleClose} className="relative z-50">
-      <DialogBackdrop className="fixed inset-0 bg-black/30" />
-      <div className="fixed inset-0 flex items-center justify-center">
-        <DialogPanel className={cn("w-full max-w-3xl h-[90vh] bg-white rounded-2xl border flex flex-col overflow-y-hidden")}>
+      <DialogBackdrop className="fixed inset-0 bg-black/50" />
+      <div className="fixed inset-0 flex items-center justify-center p-5 lg:p-0">
+        <DialogPanel className={cn("w-full max-w-3xl h-[72vh] md:h-[90vh] bg-white rounded-2xl border flex flex-col overflow-y-hidden")}>
           <DialogTitle as="div"
             className={cn(
               "flex items-center gap-4 p-5 border-b",

@@ -8,14 +8,31 @@ import CustomImage from "@/components/molecules/customImage"
 import CustomSlider from "@/components/molecules/rocksport-b2b/customSlider"
 
 const scheduleListData = [
-  { time: "08:30 AM Assembly in School & Departure for Camp" },
-  { time: "08:30 AM Assembly in School & Departure for Camp" },
-  { time: "08:30 AM Assembly in School & Departure for Camp" },
-  { time: "08:30 AM Assembly in School & Departure for Camp" },
-  { time: "08:30 AM Assembly in School & Departure for Camp" },
-  { time: "08:30 AM Assembly in School & Departure for Camp" },
-  { time: "08:30 AM Assembly in School & Departure for Camp" },
-  { time: "08:30 AM Assembly in School & Departure for Camp" },
+  { 
+    time: "08:30 AM",
+    schedule:"Assembly in School & Departure for Camp  Departure for Camp",
+   },
+  { time: "08:30 AM",
+    schedule: "08:30 AM Assembly in School & Departure for Camp" 
+  },
+  { time: "08:30 AM",
+    schedule: "08:30 AM Assembly in School & Departure for Camp" 
+  },
+  { time: "08:30 AM",
+    schedule: "08:30 AM Assembly in School & Departure for Camp" 
+  },
+  { time: "08:30 AM",
+    schedule: "08:30 AM Assembly in School & Departure for Camp" 
+  },
+  { time: "08:30 AM",
+    schedule: "08:30 AM Assembly in School & Departure for Camp" 
+  },
+  { time: "08:30 AM",
+    schedule: "08:30 AM Assembly in School & Departure for Camp" 
+  },
+  { time: "08:30 AM",
+    schedule: "08:30 AM Assembly in School & Departure for Camp" 
+  },
 ]
 
 const scheduleImageData = [
@@ -34,15 +51,15 @@ const AdventureSchedule = () => {
   const handleOpenDialog = () => setIsDialogOpen(true)
   const handleCloseDialog = () => setIsDialogOpen(false)
   return (
-    <section className="schedule-bg-image py-20">
+    <section className="schedule-bg-image py-10 md:py-20">
       <div className="container">
         <SectionTitle
           title="Schedule"
           heading="how you’ll spent your adventure"
-          customClass="w-[211px] lg:w-[462px]"
+          customClass="w-[211px] md:w-[540px]"
           headingColor
         />
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-[140px] mt-10 lg:mt-[60px]">
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-140 mt-10 lg:mt-60px">
           <ScheduleTrack data={scheduleListData} />
           <ScheduleGallery
             images={scheduleImageData}
@@ -70,13 +87,13 @@ const AdventureSchedule = () => {
           sliderContainerStyle="h-full navigation-style1"
         >
           {(item, index) => (
-            <div className="">
+            <div className="h-full">
               <CustomImage
                 src={item.image}
                 width={1200}
                 height={800}
                 alt={`schedule-${index + 1}`}
-                className="responsive-image-contain"
+                className="responsive-image-cover"
               />
             </div>
           )}

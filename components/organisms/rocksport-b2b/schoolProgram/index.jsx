@@ -75,11 +75,11 @@ const slides = [
 
 const SchoolProgram = () => {
   return (
-    <section className="pt-20 pb-[100px] container">
+    <section className="py-10 md:py-section container">
       <SectionTitle
         title="Know about the In-school Program"
         heading="Program Highlights"
-        customClass="w-[211px] lg:w-[462px]"
+        customClass="w-[211px] md:w-[462px]"
       />
 
       <CustomSlider
@@ -87,14 +87,14 @@ const SchoolProgram = () => {
         slidesPerView={1}
         spaceBetween={16}
         pagination={{ clickable: true }}
-        className="mt-[60px]"
+        className="mt-11 md:mt-60px"
       >
         {(slide) => (
           <div className="activity-grid-style">
             {slide.activities.map((item, index) => (
               <div
                 key={index}
-                className="group relative rounded-3xl overflow-hidden cursor-pointer"
+                className="group relative rounded-xl md:rounded-3xl overflow-hidden cursor-pointer"
               >
                 <CustomImage
                   src={item.image}
@@ -104,8 +104,8 @@ const SchoolProgram = () => {
                   className="responsive-image-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 activity-card-gradient" />
-                <div className="absolute bottom-4 left-4 flex items-center gap-3">
-                  <div className="size-11">
+                <div className="absolute bottom-4 left-2 md:left-4 flex items-center gap-2 md:gap-3">
+                  <div className="size-8 md:size-11 shrink-0">
                     <CustomImage
                       src={item.icon}
                       alt={`${item.title} icon`}

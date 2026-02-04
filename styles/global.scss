@@ -202,11 +202,11 @@ h6 {
   @include responsive(mobile-tablet-p) {
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 
     /* Specificity Boost: Double class selector (.activity-grid-style.activity-grid-style) */
     &.activity-grid-style>div {
-      height: 300px;
+      height: 160px;
       grid-column: auto;
       grid-row: auto;
       order: unset;
@@ -282,8 +282,12 @@ h6 {
 .imageBox {
   height: 174px;
 
+  @include responsive(tablet) {
+      height: auto;
+    }
+
   @include responsive(mobile) {
-    height: 240px;
+    height: 182px;
   }
 
   &:nth-child(1) {
