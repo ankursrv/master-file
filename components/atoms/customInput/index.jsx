@@ -29,7 +29,7 @@ const CustomInput = ({
   const inputStyles = {
     inputStyle1: "border border-dark-tone-ink/15 bg-baby-powder py-3 px-6",
     inputStyle2: "bg-dark-tone-ink/10 border border-american-silver",
-    inputStyle3: "focus:ring-0"
+    inputStyle3: "focus:ring-0",
   }
   const sizes = {
     lg: "h-[60px]",

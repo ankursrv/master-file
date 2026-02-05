@@ -70,7 +70,7 @@ const SafetyCard = ({
     <Typography variant="h4">
       {title}
     </Typography>
-    <Typography variant="p" className="text-dark-tone-ink/80 font-normal mt-3">
+    <Typography variant="p" className="text-sm md:text-base text-dark-tone-ink/80 font-normal mt-3">
       {description}
     </Typography>
   </BaseCard>

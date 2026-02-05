@@ -29,6 +29,8 @@ const buttonVariants = cva(styles.base, {
       md: styles.md,
       sm: styles.sm,
       xs: styles.xs,
+      // rocksport B2B 
+      wFull: styles.wFull,
     },
   },
   defaultVariants: {

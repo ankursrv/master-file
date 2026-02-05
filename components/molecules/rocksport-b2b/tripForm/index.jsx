@@ -1,6 +1,7 @@
 import React from "react"
 import { Button } from "@/components/atoms/rocksport-b2b/button"
 import CustomInput from "@/components/atoms/customInput"
+import useIsMobile from "@/lib/useIsMobile"
 
 const TripForm = ({
   formData,
@@ -8,8 +9,9 @@ const TripForm = ({
   onSubmit,
   onBack,
 }) => {
+  const isMobile = useIsMobile();
   return (
-    <div className="w-full bg-baby-powder rounded-xl p-8">
+    <div className="">
       <div className="space-y-6 bg-decorator-white p-5 rounded-2xl">
         <CustomInput
           label="Trip Date"
@@ -20,7 +22,7 @@ const TripForm = ({
         />
 
         {/* Payment Method */}
-        <fieldset className="grid grid-cols-3">
+        <fieldset className="grid grid-cols-2 md:grid-cols-3 gap-6 justify-between">
           <legend className="sr-only">Select Payment Method</legend> {/* //accessibility */}
           <CustomInput
             type="radio"
@@ -94,10 +96,11 @@ const TripForm = ({
         </fieldset>
       </div>
 
-      <div className="flex justify-between pt-[100px]">
+      <div className="flex gap-4 justify-between pt-section">
         <Button
           variant="outlinePrimary"
           onClick={onBack}
+          size={isMobile && "wFull"}
         >
           Back
         </Button>
@@ -110,6 +113,7 @@ const TripForm = ({
             !formData.disclaimerAccepted ||
             !formData.termsAccepted
           }
+          size={isMobile && "wFull"}
         >
           Submit
         </Button>

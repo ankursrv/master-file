@@ -11,8 +11,7 @@ const BookingIndicator = ({ currentStep }) => {
 
   return (
     <div className="w-full lg:w-[400px]">
-      {/* Header - Hidden on Mobile */}
-      <div className="hidden lg:block text-white mb-12">
+      <div className="text-white mb-8 md:mb-12">
         <Typography variant="h5" font="secondary" className="uppercase">
           BOOKING FORM
         </Typography>
@@ -22,7 +21,7 @@ const BookingIndicator = ({ currentStep }) => {
       </div>
 
       {/* Mobile Horizontal Steps */}
-      <div className="flex lg:hidden justify-between items-start mb-8">
+      <div className="flex lg:hidden justify-between items-start md:mb-8">
         {steps.map((step, index) => {
           const stepNumber = index + 1
           const isActive = currentStep === stepNumber

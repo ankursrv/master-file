@@ -246,6 +246,7 @@ h6 {
   background: linear-gradient(180deg, rgba(17, 17, 17, 0) 16.57%, #111111 94.33%);
 }
 
+// Swiper Pagination Bullet Styles 
 .swiper-pagination {
   bottom: 10px !important;
   display: flex;
@@ -264,6 +265,27 @@ h6 {
 .swiper-pagination-bullet-active {
   background: #FF6B35 !important;
   width: 80px !important;
+}
+
+// Swiper Next & Perv button Styles
+.navigation-style1 {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: black;
+    background: white;
+    border-radius: 100%;
+  }
+
+  .swiper-navigation-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// Swiper Card height Dynamic 
+.slide-card .swiper-wrapper {
+  align-items: stretch;
 }
 
 .schedule-bg-image {
@@ -322,21 +344,6 @@ h6 {
   justify-content: center;
   z-index: 2;
   border-radius: 12px;
-}
-
-.navigation-style1 {
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    color: black;
-    background: white;
-    border-radius: 100%;
-  }
-
-  .swiper-navigation-icon {
-    width: 20px;
-    height: 20px;
-  }
 }
 
 .playPauseButton {
@@ -528,20 +535,5 @@ input[type="checkbox"]:checked {
 input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
-
-// // Testimonial Navigation Style on Mobile 
-// .testimonial-navigation {
-
-//   .swiper-button-prev,
-//   .swiper-button-next {
-//     // margin-top: 2rem !important;
-//     // position: relative;
-//     // top: 10rem  !important;
-//   }
-//     .swiper-button-next {
-//       // right: 100%;
-//     }
-// }
-
 
 // Rocksport B2B END  

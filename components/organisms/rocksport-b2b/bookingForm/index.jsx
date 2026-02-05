@@ -118,11 +118,12 @@ const BookingForm = () => {
   return (
     <section
       className={cn(
-        "relative overflow-hidden booking-bg-image",
-        currentStep >= 2 ? "h-auto" : "h-[685px]"
+        "relative overflow-hidden booking-bg-image py-10 md:py-20",
+        // currentStep === 1 && "h-[685px]",
+        // currentStep === 2 && "h-auto"
       )}
     >
-      <div className="relative z-10 container py-20 flex flex-col lg:flex-row lg:justify-between gap-10">
+      <div className="relative z-10 container flex flex-col lg:flex-row lg:justify-between gap-10">
 
         {/* LEFT INDICATOR */}
         {currentStep <= 3 && (
@@ -130,7 +131,7 @@ const BookingForm = () => {
         )}
 
         {/* RIGHT CONTENT */}
-        <div className={cn("w-full", currentStep === 1 && currentStep === 2 && currentStep === 3 && "lg:w-[785px]")}>
+        <div className={cn("w-full md:min-h-[545px] bg-baby-powder rounded-xl p-4 md:p-8", currentStep === 1 && currentStep === 2 && currentStep === 3 && "lg:w-[785px]")}>
           {currentStep === 1 && (
             <ParticipantForm
               formData={formData}

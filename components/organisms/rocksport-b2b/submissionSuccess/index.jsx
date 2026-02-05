@@ -5,10 +5,12 @@ import Typography from "@/components/molecules/typography/typography"
 import Link from "next/link"
 import CustomInput from "@/components/atoms/customInput"
 import Icons from "@/components/atoms/icons"
+import useIsMobile from "@/lib/useIsMobile"
 
 const ThankYouScreen = ({ onSendOtp }) => {
+  const isMobile = useIsMobile ();
   return (
-    <div className="bg-baby-powder rounded-xl p-8 border border-dark-tone-ink/10">
+    <>
       <div className="flex flex-col items-center bg-decorator-white w-full rounded-2xl p-6">
         <div className="flex items-center justify-center">
           <CustomImage
@@ -33,12 +35,17 @@ const ThankYouScreen = ({ onSendOtp }) => {
           </Link>
         </div>
       </div>
-      <div className="flex justify-center mt-11">
-        <Button variant="fillPrimary" onClick={onSendOtp} className="!px-10">
+      <div className="flex justify-center mt-8 md:mt-11">
+        <Button
+          variant="fillPrimary"
+          onClick={onSendOtp}
+          className="!px-10"
+          size={isMobile && "wFull"}
+        >
           Request OTP
         </Button>
       </div>
-    </div>
+    </>
   )
 }
 
@@ -50,20 +57,20 @@ const OtpVerification = ({ onVerify, onBack }) => {
     updated[index] = value.slice(-1)
     setOtp(updated)
   }
-
+const isMobile = useIsMobile ();
   return (
-    <div className="bg-baby-powder rounded-xl p-8 border border-dark-tone-ink/10">
+    <>
       <div className="flex flex-col items-center bg-decorator-white w-full rounded-2xl px-6 py-6 md:py-20">
         <Typography variant="h3" className="!font-semibold">OTP Verification</Typography>
         <div className="mt-11">
           <Typography variant="p" className="font-semibold capitalize">Please enter the OTP sent to <span className="inline-block text-theme-primary">6861738343</span> </Typography>
-          <div className="flex justify-center gap-3 py-3">
+          <div className="flex justify-center gap-2 md:gap-3 py-3">
             {otp.map((digit, i) => (
               <CustomInput
                 key={i}
                 value={digit}
                 onChange={(e) => handleChange(e.target.value, i)}
-                inputContainer="w-[90px] placeholder:text-center"
+                inputContainer={isMobile && "!w-10 h-10 !px-3 placeholder:text-center"}
                 maxLength={1}
                 placeholder="-"
               />
@@ -77,28 +84,28 @@ const OtpVerification = ({ onVerify, onBack }) => {
           submit
         </Button>
       </div>
-    </div>
+    </>
   )
 }
 
 const SuccessScreen = () => {
   return (
-    <div className="bg-baby-powder rounded-xl p-8 border border-dark-tone-ink/10">
+    <>
       <div className="flex flex-col items-center bg-decorator-white rounded-2xl px-6 py-6 md:py-14">
-      <div className="flex justify-center">
-        <CustomImage
-          src="/images/rocksport-b2b-images/success.webp"
-          width={300}
-          height={247}
-          alt="booking success"
-        />
-      </div>
+        <div className="flex justify-center">
+          <CustomImage
+            src="/images/rocksport-b2b-images/success.webp"
+            width={300}
+            height={247}
+            alt="booking success"
+          />
+        </div>
 
-      <Typography variant="h3" className="!font-semibold capitalize md:w-[640px] text-center md:leading-snug">
-        The Indemnity Process Has Been Successfully Completed
-      </Typography>
-    </div>
-    </div>
+        <Typography variant="h3" className="!font-semibold capitalize md:w-[640px] text-center md:leading-snug">
+          The Indemnity Process Has Been Successfully Completed
+        </Typography>
+      </div>
+    </>
   )
 }
 

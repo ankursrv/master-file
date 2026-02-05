@@ -3,6 +3,7 @@ import CustomInput from "@/components/atoms/customInput"
 import CustomSelect from "@/components/molecules/customSelect"
 import Icons from "@/components/atoms/icons"
 import { Button } from "@/components/atoms/rocksport-b2b/button"
+import useIsMobile from "@/lib/useIsMobile"
 
 const ParticipantForm = ({
   formData,
@@ -36,9 +37,10 @@ const ParticipantForm = ({
     { value: "AB-", label: "AB-" },
   ]
 
+  const isMobile = useIsMobile();
   return (
-    <div className="w-full bg-baby-powder rounded-xl p-8">
-      <div className="space-y-6 bg-decorator-white p-5 rounded-2xl">
+    <div className="">
+      <div className="space-y-6 bg-decorator-white py-5 px-4 md:p-5 rounded-2xl">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <CustomInput
             label="Full Name"
@@ -115,6 +117,7 @@ const ParticipantForm = ({
           variant="fillPrimary"
           onClick={onNext}
           className="px-12"
+          size={isMobile && "wFull"}
         >
           Next
         </Button>

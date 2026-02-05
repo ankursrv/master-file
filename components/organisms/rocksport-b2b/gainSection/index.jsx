@@ -3,6 +3,8 @@ import React from "react"
 import SectionTitle from "@/components/atoms/rocksport-b2b/sectionTitle"
 import GridCard from "../gridCard"
 import CustomSlider from "@/components/molecules/rocksport-b2b/customSlider"
+import useIsMobile from "@/lib/useIsMobile"
+import { cn } from "@/lib/utils"
 
 const GainSection = () => {
   const valueCardData = [
@@ -37,45 +39,52 @@ const GainSection = () => {
       description: "Develop independence, decision-making abilities, and practical life skills that will benefit students beyond the classroom.",
     },
   ]
+  const isMobile = useIsMobile()
   return (
-    <section className="bg-image py-section">
+    <section className="bg-image py-10 md:py-section">
       <div className="container">
-      <SectionTitle
-        title="What You’ll Gain"
-        heading="Why Adventure Matters"
-        customClass="w-[211px] lg:w-[530px]"
-      />
-      {/* Desktop Layout */}
-      <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-[60px]">
-        {valueCardData.map((item, index) => (
-          <GridCard
-            key={index}
-            variant="valueCard"
-            src={item.image}
-            alt={item.title}
-            title={item.title}
-            description={item.description}
-          />
-        ))}
-      </div>
-      {/* Mobile Layout */}
-      <CustomSlider
-        items={valueCardData}
-        slidesPerView={1.4}
-        spaceBetween={20}
-        sliderContainerStyle="!block md:!hidden"
-      >
-        {(item, index) => (
-          <GridCard
-            key={index}
-            variant="valueCard"
-            src={item.image}
-            alt={item.title}
-            title={item.title}
-            description={item.description}
-          />
-        )}
-      </CustomSlider>
+        <SectionTitle
+          title="What You’ll Gain"
+          heading="Why Adventure Matters"
+          customClass="w-[211px] lg:w-[530px]"
+        />
+        <div className={cn("mt-11 md:mt-60px",
+          !isMobile && "grid md:grid-cols-2 lg:grid-cols-3 gap-10")}
+        >
+          {isMobile ?
+            (
+              <CustomSlider
+                items={valueCardData}
+                slidesPerView={1.2}
+                spaceBetween={20}
+                breakpoints={{ 640: { slidesPerView: 2 } }}
+                sliderContainerStyle="slide-card"
+                className="!h-auto"
+              >
+                {(item, index) => (
+                  <GridCard
+                    key={index}
+                    variant="valueCard"
+                    src={item.image}
+                    alt={item.title}
+                    title={item.title}
+                    description={item.description}
+                  />
+                )}
+              </CustomSlider>
+            ) :
+            (valueCardData.map((item, index) => (
+              <GridCard
+                key={index}
+                variant="valueCard"
+                src={item.image}
+                alt={item.title}
+                title={item.title}
+                description={item.description}
+              />
+            )))
+          }
+        </div>
       </div>
     </section>
   )

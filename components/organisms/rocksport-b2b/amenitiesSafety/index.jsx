@@ -42,15 +42,15 @@ const AmenitiesSafety = () => {
   const leftCards = safetyCardData.slice(0, midPoint)
   const rightCards = safetyCardData.slice(midPoint)
   return (
-    <section className="relative bg-image">
-      <div className="container pt-20">
+    <section className="relative bg-image pt-60px md:pt-20">
+      <div className="container">
         <SectionTitle
           title="Amenities & Safety"
           heading="Your safety is our #1 priority"
           customClass="w-[211px] lg:w-[395px]"
         />
         {/* Desktop Layout */}
-        <div className="hidden lg:flex mt-[60px]">
+        <div className="hidden lg:flex mt-60px">
           <div className="space-y-10">
             {leftCards.map((item, index) => (
               <GridCard
@@ -92,13 +92,14 @@ const AmenitiesSafety = () => {
           </div>
         </div>
         {/* Mobile Layout */}
-        <div className="block lg:hidden mt-10">
+        <div className="block lg:hidden mt-11">
           <CustomSlider
             items={safetyCardData}
             slidesPerView={1.4}
             spaceBetween={20}
             sliderContainerStyle=""
             className="h-auto"
+            breakpoints={{ 640: { slidesPerView: 2 } }}
           >
             {(item) => (
               <GridCard
@@ -107,22 +108,20 @@ const AmenitiesSafety = () => {
                 alt={item.title}
                 title={item.title}
                 description={item.description}
-                imageContainerStyle="size-[84px] shrink-0 bg-theme-primary"
+                imageContainerStyle="size-[54px] md:size-[84px] shrink-0 bg-theme-primary"
                 imageStyle="size-[45px]"
                 cardVariantStyle="secondary"
               />
             )}
           </CustomSlider>
           {/* Safety Image on Mobile */}
-          <div className="mt-10">
-            <CustomImage
-              src="/images/rocksport-b2b-images/safety-img.webp"
-              width={350}
-              height={350}
-              alt="rocksport campsite safety mobile view"
-              className="responsive-image-cover rounded-xl"
-            />
-          </div>
+          <CustomImage
+            src="/images/rocksport-b2b-images/safety-img.webp"
+            width={350}
+            height={350}
+            alt="rocksport campsite safety mobile view"
+            className="responsive-image-cover rounded-xl"
+          />
         </div>
       </div>
       {/* Background Pattern Image  */}

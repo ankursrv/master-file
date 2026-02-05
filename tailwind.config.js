@@ -43,6 +43,7 @@ module.exports = {
       padding:{
         "section" : "100px",
         "section1": "120px",
+        "60px": "60px",
       },
       gap:{
       "140": "140px",

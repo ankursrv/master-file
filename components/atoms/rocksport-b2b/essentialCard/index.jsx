@@ -11,7 +11,7 @@ const EssentialCard = ({
   imagePosition
 }) => {
   return (
-    <div className={cn("relative overflow-hidden min-h-[400px] lg:min-h-[600px] p-6 lg:p-12 flex flex-col", bgColor)}>
+    <div className={cn("relative overflow-hidden min-h-[400px] md:min-h-[600px] p-6 lg:p-12 flex flex-col", bgColor)}>
       <Typography
         variant="h2"
         font="secondary"
