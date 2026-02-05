@@ -10,8 +10,7 @@ const HeroBanner = () => {
         src="/images/rocksport-b2b-images/banner/banner.webp"
         alt="Students participating in Rocksport In-school Program adventure activities at DPS RK Puram"
         fill
-        priority
-        className="object-cover -z-10"        
+        className="responsive-image-cover"        
       />
       <div className="absolute bottom-0 w-full h-1/2 md:h-full bg-fade-down md:bg-fade-right" />
 

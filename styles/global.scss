@@ -267,7 +267,7 @@ h6 {
 }
 
 .schedule-bg-image {
-  background: url("/images/rocksport-b2b-images/section-bg-pattern/pattern-2.png") #026954;
+  background: url("/images/rocksport-b2b-images/section-bg-pattern/pattern-2.webp") #026954;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -401,7 +401,7 @@ h6 {
 }
 
 .epic-pattern {
-  background: url("/images/rocksport-b2b-images/epic-pattern.png") no-repeat center/cover;
+  background: url("/images/rocksport-b2b-images/epic-pattern.webp") no-repeat center/cover;
   height: 147px;
   position: absolute;
   top: 0;
@@ -421,7 +421,7 @@ h6 {
     content: "";
     position: absolute;
     inset: 0;
-    background: url("/images/rocksport-b2b-images/booking-bg.jpg") no-repeat center/cover;
+    background: url("/images/rocksport-b2b-images/booking-bg.webp") no-repeat center/cover;
     filter: grayscale(100%) brightness(0.4);
     z-index: 0;
   }
@@ -440,7 +440,7 @@ h6 {
         rgba(17, 17, 17, 0.08) 36.27%,
         rgba(17, 17, 17, 0.08) 68.16%,
         #111111 99.74%),
-      url("/images/rocksport-b2b-images/booking-bg.jpg") center/cover no-repeat;
+      url("/images/rocksport-b2b-images/booking-bg.webp") center/cover no-repeat;
     filter: brightness(0.4);
     z-index: 0;
   }

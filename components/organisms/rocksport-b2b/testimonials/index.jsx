@@ -11,22 +11,22 @@ const testimonials = [
   {
     name: "Sarthak Shah",
     role: "STUDENT PARENT",
-    image: "/images/rocksport-b2b-images/testimonial/testi-img1.png",
-    profilePic: "/images/rocksport-b2b-images/testimonial/profile1.jpg",
+    image: "/images/rocksport-b2b-images/testimonial/testi-img1.webp",
+    profilePic: "/images/rocksport-b2b-images/testimonial/profile1.webp",
     text: "Rafting at Thrill Factory was one of the most refreshing adventures I've ever had! The calm waters, and just the right amount of thrill made it unforgettable. The team guided us perfectly and ensured we had the best time.",
   },
   {
     name: "Aditi Mehra",
     role: "STUDENT PARENT",
-    image: "/images/rocksport-b2b-images/testimonial/testi-img2.png",
-    profilePic: "/images/rocksport-b2b-images/testimonial/profile2.jpg",
+    image: "/images/rocksport-b2b-images/testimonial/testi-img2.webp",
+    profilePic: "/images/rocksport-b2b-images/testimonial/profile2.webp",
     text: "Soaring high above the mountains during my paragliding session at Thrill Factory was absolutely magical! The views were breathtaking, and the instructors made me feel completely safe from start to finish—I can't wait to do it again!",
   },
   {
     name: "Sarthak Shah 2",
     role: "STUDENT PARENT",
-    image: "/images/rocksport-b2b-images/testimonial/testi-img1.png",
-    profilePic: "/images/rocksport-b2b-images/testimonial/profile1.jpg",
+    image: "/images/rocksport-b2b-images/testimonial/testi-img1.webp",
+    profilePic: "/images/rocksport-b2b-images/testimonial/profile1.webp",
     text: "Rafting at Thrill Factory was one of the most refreshing adventures I've ever had! The calm waters, and just the right amount of thrill made it unforgettable. The team guided us perfectly and ensured we had the best time.",
   },
 ]

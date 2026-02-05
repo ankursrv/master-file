@@ -22,14 +22,14 @@ const EssentialsSection = () => {
       <EssentialCard
         title="Pre-requisite"
         items={prerequisiteItems}
-        imageSrc="/images/rocksport-b2b-images/essentials1.png"
+        imageSrc="/images/rocksport-b2b-images/essentials1.webp"
         imagePosition="absolute-bottom"
       />
 
       <EssentialCard
         title="What to carry?"
         items={carryItems}
-        imageSrc="/images/rocksport-b2b-images/essentials2.png"
+        imageSrc="/images/rocksport-b2b-images/essentials2.webp"
         bgColor="bg-theme-primary"
       />
     </section>

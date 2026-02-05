@@ -35,7 +35,7 @@ const BookingForm = () => {
     termsAccepted: false,
   })
 
-  // ---------------- HANDLERS ----------------
+  // HANDLERS 
 
   const handleInputChange = (e, guardianIndex = null) => {
     const { name, value, type, checked } = e.target
@@ -97,7 +97,7 @@ const BookingForm = () => {
     }))
   }
 
-  // ---------------- STEP CONTROLS ----------------
+  // STEP CONTROLS
 
   const handleNext = () => setCurrentStep(prev => prev + 1)
   const handleBack = () => setCurrentStep(prev => prev - 1)

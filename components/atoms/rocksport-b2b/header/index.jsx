@@ -7,32 +7,32 @@ const Header = () => {
       <nav className="flex items-center justify-center h-[50px] md:h-20 bg-dark-tone-ink md:bg-black/60 gap-4 md:gap-7">
         <div className="w-[130px] md:w-[180px] h-[30px] md:h-[43px]">
           <CustomImage
-            src="/images/rocksport-b2b-images/header/header-logo.png"
+            src="/images/rocksport-b2b-images/header/header-logo.webp"
             width={180}
             height={43}
             alt="Rocksport Logo"
             className="responsive-image-contain"
-            priority
+            priority={true}
           />
         </div>
         <div className="size-5 md:w-[31px]">
           <CustomImage
-            src="/images/rocksport-b2b-images/header/output-onlinepngtools.png"
+            src="/images/rocksport-b2b-images/header/output-onlinepngtools.webp"
             width={31}
             height={31}
-            alt=""
+            alt="Rocksport Logo"
             className="responsive-image-cover"
-            priority
+            priority={true}
           />
         </div>
         <div className="w-[31px] md:w-[71px] h-[30px] md:h-[69px]">
           <CustomImage
-            src="/images/rocksport-b2b-images/header/image1.png"
+            src="/images/rocksport-b2b-images/header/image1.webp"
             width={71}
             height={69}
-            alt=""
+            alt="School logo"
             className="responsive-image-cover"
-            priority
+            priority={true}
           />
         </div>
       </nav>

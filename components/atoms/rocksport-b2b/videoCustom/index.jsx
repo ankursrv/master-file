@@ -53,7 +53,7 @@ const VideoCustom = ({
 
           {!isPlaying ? (
             <div className={styles.playPauseButton}>
-              <button className={styles.button} onClick={handlePlayPause}>
+              <button aria-label="Play Video" className={styles.button} onClick={handlePlayPause}>
                 <Icons.PlayIcon />
               </button>
               <svg

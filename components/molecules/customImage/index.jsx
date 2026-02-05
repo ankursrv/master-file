@@ -7,7 +7,9 @@ const CustomImage = ({
   height,
   alt,
   className,
-  priority = false, ...props
+  priority = false, 
+  loading="lazy",
+  ...props
 }) => {
   return (
     <Image
@@ -16,7 +18,7 @@ const CustomImage = ({
       height={height}
       alt={alt || ""}
       className={className}
-      priority={priority}
+      {...(priority ? { priority: true } : { loading })}
       {...props}
     />
   )

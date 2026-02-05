@@ -13,7 +13,7 @@ const TripDateCard = () => {
             TRIP DATE 
           </Typography>
         </div>
-         <span className="inline-block sm:hidden mx-6 text-white">:</span>
+         <span className="inline-block sm:hidden mx-6px text-white">:</span>
         <Typography variant="h3" className=" text-white" font="secondary">
           15 JAN 2026
         </Typography>

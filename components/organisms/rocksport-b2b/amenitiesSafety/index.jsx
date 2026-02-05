@@ -68,7 +68,7 @@ const AmenitiesSafety = () => {
           </div>
           <div className="min-w-[445px]">
             <CustomImage
-              src="/images/rocksport-b2b-images/safety-img.png"
+              src="/images/rocksport-b2b-images/safety-img.webp"
               width={445}
               height={445}
               alt="rocksport campsite safety"
@@ -116,7 +116,7 @@ const AmenitiesSafety = () => {
           {/* Safety Image on Mobile */}
           <div className="mt-10">
             <CustomImage
-              src="/images/rocksport-b2b-images/safety-img.png"
+              src="/images/rocksport-b2b-images/safety-img.webp"
               width={350}
               height={350}
               alt="rocksport campsite safety mobile view"

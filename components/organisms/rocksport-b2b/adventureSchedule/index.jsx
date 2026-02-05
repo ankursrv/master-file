@@ -36,10 +36,10 @@ const scheduleListData = [
 ]
 
 const scheduleImageData = [
-  { image: "/images/rocksport-b2b-images/schedule1.png" },
+  { image: "/images/rocksport-b2b-images/schedule1.webp" },
   { image: "/images/rocksport-b2b-images/schedule2.jpg" },
   { image: "/images/rocksport-b2b-images/schedule3.png" },
-  { image: "/images/rocksport-b2b-images/schedule1.png" },
+  { image: "/images/rocksport-b2b-images/schedule1.webp" },
   { image: "/images/rocksport-b2b-images/schedule2.jpg" },
   { image: "/images/rocksport-b2b-images/schedule2.jpg" },
   { image: "/images/rocksport-b2b-images/schedule2.jpg" },

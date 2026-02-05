@@ -55,7 +55,7 @@ const Faq = () => {
           </Typography>
           <div className="w-[408px] h-[272px] absolute bottom-0 left-0">
             <CustomImage
-              src="/images/rocksport-b2b-images/faq.png"
+              src="/images/rocksport-b2b-images/faq.webp"
               width={1000}
               height={1000}
               alt="faq image"
