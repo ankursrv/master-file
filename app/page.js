@@ -13,7 +13,7 @@ import Testimonials from "@/components/organisms/rocksport-b2b/testimonials"
 
 const Home = () => {
   return (
-    <main>
+    <main id="main-content" role="main">
       <Header />
       <HeroBanner />
       <SchoolProgram />

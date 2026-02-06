@@ -48,11 +48,11 @@ const TestimonialsSection = () => {
   const isMobile = useIsMobile()
 
   return (
-    <section className="relative testimonial-bg-image py-24 overflow-hidden">
+    <section className="relative testimonial-bg-image py-24 overflow-hidden" role="region" aria-labelledby="testimonials-heading">
       <div className="container z-10 relative navigation-style1">
         <div className="flex flex-col lg:flex-row gap-10">
           <div className="relative w-full lg:min-w-[413px]">
-            <Typography variant="h2" font="secondary" className="text-white">
+            <Typography id="testimonials-heading" variant="h2" font="secondary" className="text-white">
               LOVED BY THOUSANDS OF STUDENTS & PARENTS
             </Typography>
             <Typography variant="p" className="text-white/80 text-lg lg:text-xl font-normal pt-6 max-w-[400px]">
@@ -60,8 +60,8 @@ const TestimonialsSection = () => {
             </Typography>
             {/* For Mobile */}
             <div className="hidden lg:block w-1/4 absolute lg:bottom-8 lg:left10">
-              <div className="swiper-button-next " />
-              <div className="swiper-button-prev" />
+              <button type="button" className="swiper-button-next" aria-label="Next testimonial"/>
+              <button type="button" className="swiper-button-prev" aria-label="Previous testimonial" />
             </div>
           </div>
 
@@ -129,8 +129,8 @@ const TestimonialsSection = () => {
             </CustomSlider>
             {/* For Desktop */}
             <div className="w-1/3 sm:w-1/6 block lg:hidden absolute top-1/2 right-0 mt-10 h-full">
-              <div className="swiper-button-next " />
-              <div className="swiper-button-prev" />
+              <button type="button" className="swiper-button-next" aria-label="Next testimonial" />
+              <button type="button" className="swiper-button-prev" aria-label="Previous testimonial" />
             </div>
           </div>
         </div>

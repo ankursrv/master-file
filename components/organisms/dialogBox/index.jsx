@@ -29,7 +29,7 @@ const DialogBox = ({
           >
             {title && <p className="text-xl font-semibold">{title}</p>}
             {closeIcon && (
-              <button onClick={onClose}>
+              <button type="button" aria-label="Close dialog" onClick={onClose}>
                 <Icons.Close />
               </button>
             )}

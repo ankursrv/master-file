@@ -20,7 +20,7 @@ const Header = () => {
             src="/images/rocksport-b2b-images/header/output-onlinepngtools.webp"
             width={31}
             height={31}
-            alt="Rocksport Logo"
+            alt="Rocksport icon"
             className="responsive-image-cover"
             priority={true}
           />
