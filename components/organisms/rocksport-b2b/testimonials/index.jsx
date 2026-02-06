@@ -13,7 +13,7 @@ const testimonials = [
     role: "STUDENT PARENT",
     image: "/images/rocksport-b2b-images/testimonial/testi-img1.webp",
     profilePic: "/images/rocksport-b2b-images/testimonial/profile1.webp",
-    text: "Rafting at Thrill Factory was one of the most refreshing adventures I've ever had! The calm waters, and just the right amount of thrill made it unforgettable. The team guided us perfectly and ensured we had the best time.",
+    text: "Rafting at Thrill Factory was one of the most refreshing adventures I've ever had! The calm waters, and just the right amount of thrill made it unforgettable. The team guided us perfectly and ensured we had the best time. The team guided us perfectly and ensured we had the best time.",
   },
   {
     name: "Aditi Mehra",
@@ -82,11 +82,11 @@ const TestimonialsSection = () => {
                 640: { slidesPerView: 2, spaceBetween: 40 },
               }}
               sliderContainerStyle="lg:w-[867px]"
-              className="h-full"
+              className="!h-auto"
             >
               {(item) => (
                 <div className="bg-dark-tone-ink/60 backdrop-blur-sm rounded-xl overflow-hidden h-full flex flex-col">                  
-                  <div className="relative w-[413px] h-[374px]">
+                  <div className="relative w-full h-[374px]">
                     <CustomImage
                       src={item.image}
                       width={1000}
@@ -96,7 +96,7 @@ const TestimonialsSection = () => {
                     />
                     <div className="bg-testimonial-gradient absolute bottom-0 h-16 w-full" />
                   </div>
-                  <div className="p-6 relative border border-white/40 border-t-0 rounded-xl rounded-t-none">
+                  <div className="p-6 relative border border-white/40 border-t-0 rounded-xl rounded-t-none flex-1">
                     <div className="absolute -top-8 right-7">
                      <Icons.Quatation />
                     </div>
