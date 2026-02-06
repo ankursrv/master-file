@@ -10,16 +10,7 @@ const BookingIndicator = ({ currentStep }) => {
   ]
 
   return (
-    <div className="w-full lg:w-[400px]">
-      <div className="text-white mb-8 md:mb-12">
-        <Typography variant="h5" font="secondary" className="uppercase">
-          BOOKING FORM
-        </Typography>
-        <p className="text-white/80 text-sm mt-2">
-          Fill up the form to book your adventure
-        </p>
-      </div>
-
+    <div className="w-full lg:w-[400px]">  
       {/* Mobile Horizontal Steps */}
       <div className="flex lg:hidden justify-between items-start md:mb-8">
         {steps.map((step, index) => {

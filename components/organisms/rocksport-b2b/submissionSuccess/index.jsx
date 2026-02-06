@@ -6,6 +6,7 @@ import Link from "next/link"
 import CustomInput from "@/components/atoms/customInput"
 import Icons from "@/components/atoms/icons"
 import useIsMobile from "@/lib/useIsMobile"
+import { cn } from "@/lib/utils"
 
 const ThankYouScreen = ({ onSendOtp }) => {
   const isMobile = useIsMobile ();
@@ -70,7 +71,7 @@ const isMobile = useIsMobile ();
                 key={i}
                 value={digit}
                 onChange={(e) => handleChange(e.target.value, i)}
-                inputContainer={isMobile && "!w-10 h-10 !px-3 placeholder:text-center"}
+                inputContainer={cn("!w-[90px] placeholder:text-center" ,isMobile && "!w-10 h-10 !px-3")}
                 maxLength={1}
                 placeholder="-"
               />
