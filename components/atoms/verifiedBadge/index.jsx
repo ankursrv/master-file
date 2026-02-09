@@ -22,7 +22,7 @@ const VerifiedBadge = ({
     )}>
       <div className={cn("size-7", size)}>
         <CustomImage
-          src="/images/icon/rocksport.svg"
+          src="/images/icon/rocksport.webp"
           width={1000}
           height={1000}
           className="responsive-image-contain"

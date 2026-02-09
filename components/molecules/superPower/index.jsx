@@ -6,7 +6,7 @@ const SuperPower = () => {
     <div className="bg-white px-4 rounded-full h-9 flex items-center justify-center gap-2 absolute top-3 left-3">
       <div className="size-6">
         <Image 
-        src="/images/supercoin-icon2.svg"
+        src="/images/supercoin-icon2.webp"
         width={1000}
         height={1000}
         alt="not found"

@@ -21,7 +21,7 @@ const Wishlist = ({
     >
       <button className="size-6" onClick={() => setWishlist(!wishlist)}>
         <CustomImage
-          src={wishlist ? "/images/icon/heart-icon-fill.svg" : "/images/icon/heart-icon.svg"}
+          src={wishlist ? "/images/icon/heart-icon-fill.webp" : "/images/icon/heart-icon.webp"}
           width={1000}
           height={1000}
         />

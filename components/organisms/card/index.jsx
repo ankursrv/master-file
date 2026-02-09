@@ -34,8 +34,8 @@ const BaseCard = ({
         <div className={cn(imageContainerStyle ? imageContainerStyle : "aspect-[4/3] h-[222px]")}>
           <Image
             src={baseImage}
-            width={1000}
-            height={1000}
+            width={400}
+            height={400}
             alt="not found"
             className="responsive-image-cover"
           />
@@ -60,7 +60,7 @@ const BaseCard = ({
           cardEdges ? "-mx-4 -mb-4 mt-4" : ""
         )}>
           <Image
-            src="/images/supercoin-icon2.svg"
+            src="/images/supercoin-icon2.webp"
             width={16}
             height={16}
             alt="not found"
