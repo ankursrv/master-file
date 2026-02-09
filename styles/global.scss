@@ -125,3 +125,34 @@ h3 {
     height: 20px;
   }
 }
+
+/* ===== Radio Buttons ===== */
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #606060;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+input[type="radio"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #F36523;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+input[type="radio"]:checked {
+  border-color: #F36523;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}

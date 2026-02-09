@@ -27,9 +27,9 @@ const CustomInput = ({
   checked,
 }) => {
   const inputStyles = {
-    inputStyle1: "border border-dark-tone-ink/15 bg-baby-powder py-3 px-6",
+    inputStyle1: "border border-american-silver/15 bg-primary-blue py-3 px-6",
     inputStyle2: "bg-dark-tone-ink/10 border border-american-silver",
-    inputStyle3: "focus:ring-0",
+    inputStyle3: "focus:!ring-0",
   }
 
   const sizes = {
@@ -69,9 +69,9 @@ const CustomInput = ({
             errorStyles,
             icon && iconPosition === "left" && "pl-14",
             rightIcon && "pr-14",
-            "block w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-theme-primary",
+            "block w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-dark",
             inputContainer,
-            disabled && "bg-dark-tone-ink/10 border-dark-tone-ink/15 cursor-not-allowed"
+            disabled && "bg-red-600/10 border-red-600/15 cursor-not-allowed",
           )}
           type={type}
           name={name}
@@ -90,8 +90,8 @@ const CustomInput = ({
         {/* File input helper text */}
         {InputType === "file" && (
           <div className="flex flex-col absolute top-1/2 -translate-y-1/2 left-11 pointer-events-none">
-            <span className="text-sm text-dreamless-sleep/60 font-semibold">Upload Here</span>
-            <span className="text-[10px] text-dreamless-sleep/60 font-medium">
+            <span className="text-sm text-blue-500/60 font-semibold">Upload Here</span>
+            <span className="text-[10px] text-green-600/60 font-medium">
               Format jpeg, png, pdf, AVIF & Up to 2mb
             </span>
           </div>
