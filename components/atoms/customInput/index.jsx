@@ -1,5 +1,5 @@
 import React from "react"
-import { Description, Field, Input, Label } from '@headlessui/react'
+import { Field, Input, Label } from "@headlessui/react"
 import { cn } from "@/lib/utils"
 
 const CustomInput = ({
@@ -7,7 +7,7 @@ const CustomInput = ({
   label,
   labelStyle,
   variant = "inputStyle1",
-  type,
+  type = "text",
   name,
   placeholder,
   size = "lg",
@@ -23,7 +23,7 @@ const CustomInput = ({
   inputContainer,
   accept,
   disabled,
-  focus = true,
+  autoFocus,
   checked,
 }) => {
   const inputStyles = {
@@ -31,9 +31,11 @@ const CustomInput = ({
     inputStyle2: "bg-dark-tone-ink/10 border border-american-silver",
     inputStyle3: "focus:ring-0",
   }
+
   const sizes = {
     lg: "h-[60px]",
   }
+
   const errorStyles = error
     ? "border-red-500 focus:border-red-500 focus:ring-red-500"
     : ""
@@ -59,17 +61,17 @@ const CustomInput = ({
             {rightIcon}
           </div>
         )}
+
         <Input
           className={cn(
             inputStyles[variant],
             sizes[size],
             errorStyles,
-            icon && iconPosition === "left" ? "pl-14" : "",
-            rightIcon ? "pr-14" : "",
-            "block w-full rounded-lg focus:bg-none focus:outline-none",
+            icon && iconPosition === "left" && "pl-14",
+            rightIcon && "pr-14",
+            "block w-full rounded-lg focus:outline-none focus:ring-1 focus:ring-theme-primary",
             inputContainer,
-            disabled && "bg-dark-tone-ink/10 border-dark-tone-ink/15",
-            focus ? "focus:ring-1 focus:ring-theme-primary" : focus
+            disabled && "bg-dark-tone-ink/10 border-dark-tone-ink/15 cursor-not-allowed"
           )}
           type={type}
           name={name}
@@ -79,12 +81,13 @@ const CustomInput = ({
           required={required}
           accept={accept}
           disabled={disabled}
-          focus={focus}
+          autoFocus={autoFocus} 
           aria-invalid={!!error}
           aria-describedby={error ? `${name}-error` : undefined}
           checked={checked}
         />
 
+        {/* File input helper text */}
         {InputType === "file" && (
           <div className="flex flex-col absolute top-1/2 -translate-y-1/2 left-11 pointer-events-none">
             <span className="text-sm text-dreamless-sleep/60 font-semibold">Upload Here</span>
