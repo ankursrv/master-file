@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./mixins.scss";
+
 body {
   background: whitesmoke;
   font-family: "Montserrat", sans-serif;
@@ -9,10 +11,10 @@ body {
 
 .container {
   padding-inline: 20px;
+  margin: 0 auto;
 
   @media (min-width:1400px) {
     max-width: 1280px;
-    margin: 0 auto;
   }
 }
 
@@ -24,6 +26,7 @@ body {
   src: url('../public/fonts/NexaRustSlab-Trial-Black3.woff') format('woff');
   font-display: swap;
 }
+
 @font-face {
   font-family: 'NexaRust';
   font-style: normal;
@@ -84,4 +87,41 @@ h3 {
 
 .theme-orange::-webkit-scrollbar-thumb {
   background: orangered;
+}
+
+// Swiper Pagination Bullet Styles 
+.swiper-pagination {
+  bottom: 10px !important;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  width: 30px !important;
+  height: 4px !important;
+  border-radius: 2px !important;
+  background: #CFCEC6 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FF6B35 !important;
+  width: 80px !important;
+}
+
+// Swiper Next & Perv button Styles
+.navigation-style1 {
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: black;
+    background: white;
+    border-radius: 100%;
+  }
+
+  .swiper-navigation-icon {
+    width: 20px;
+    height: 20px;
+  }
 }

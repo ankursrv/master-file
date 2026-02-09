@@ -6,8 +6,6 @@ import Wishlist from "@/components/atoms/wishlist";
 import Location from "@/components/atoms/location";
 import VerifiedBadge from "@/components/atoms/verifiedBadge";
 import useIsMobile from "@/lib/useIsMobile";
-import Typography from "@/components/molecules/typography/typography";
-import CustomAccordion from "@/components/molecules/disclosure";
 
 const cardData = [
   {
@@ -88,9 +86,7 @@ export default function Home() {
         closeIcon={isMobile ? true : false}
       >
         Are you sure you want to deactivate your account? All of your data will be permanently removed.
-      </DialogBox>
-  <CustomAccordion />
-      
+      </DialogBox>   
     </div>
   );
 }
