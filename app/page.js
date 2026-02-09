@@ -1,9 +1,10 @@
+import Header from "@/components/molecules/layout/header"
 import React from "react"
 
 const Home = () => {
   return (
     <div>
-      Home
+      <Header />
     </div>
   )
 }
