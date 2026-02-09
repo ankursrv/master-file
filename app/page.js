@@ -6,6 +6,8 @@ import Wishlist from "@/components/atoms/wishlist";
 import Location from "@/components/atoms/location";
 import VerifiedBadge from "@/components/atoms/verifiedBadge";
 import useIsMobile from "@/lib/useIsMobile";
+import CustomSlider from "@/components/organisms/customSlider";
+import CustomSelect from "@/components/molecules/customSelect";
 
 const cardData = [
   {
@@ -34,8 +36,49 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
   const [isOpenTwo, setIsOpenTwo] = useState(false)
   const isMobile = useIsMobile ()
+
+  const classOptions = [
+    { value: "1", label: "Class 1" },
+    { value: "2", label: "Class 2" },
+    { value: "3", label: "Class 3" },
+    { value: "4", label: "Class 4" },
+    { value: "5", label: "Class 5" },
+  ]
   return (
     <div className="container">
+      {/* Swiper Slider  */}
+      <CustomSlider
+        items={cardData}
+        slidesPerView={3}
+        navigation={true}
+        sliderContainerStyle="navigation-style1"
+      >
+        {(item) => (
+          <Card
+            baseImage={item.image}
+            title={item.title}
+            city={item.city}
+            day={item.day}
+            // borderColor="border-red-500"
+            imageContainerStyle="h-[222px] rounded-xl rounded-b-none overflow-hidden"
+            superPower
+            wishlist
+            supercoin
+            variant="activityCard"
+            // cardEdges
+            verified="Verified"
+          />
+        )}
+      </CustomSlider>
+      {/* Custom Select  */}
+      <CustomSelect
+        label="Class"
+        value={classOptions.find(option => option.value === "2")}
+        onChange={(value) => onSelectChange("class", value)}
+        options={classOptions}
+        placeholder="Select"
+        required
+      />
       <Wishlist position="top-left" />
       <Location
         city="Delhi"
@@ -46,8 +89,8 @@ export default function Home() {
         className="top-20 relative left-20 rounded-tl-2xl"
       />
 
-      {/* <div className="grid grid-cols-4 gap-4 mt-10">
-        {cardData.map ((item,index)=>
+      <div className="grid grid-cols-4 gap-4 mt-10">
+        {/* {cardData.map ((item,index)=>
           <Card
             key={index}
             baseImage={item.image}
@@ -63,8 +106,8 @@ export default function Home() {
             // cardEdges
             verified="Verified"
           />
-        )}
-      </div> */}
+        )} */}
+      </div>
 
       {/* when close icon available then dialogbox not close click outer side  */}
       <button onClick={() => setIsOpen(true)} className="bg-blue-300 px-5 py-1 mr-5">Dialog ONE</button>
