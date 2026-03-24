@@ -34,6 +34,7 @@ const CustomInput = ({
 
   const sizes = {
     lg: "h-[60px]",
+    md:"h-12",
   }
 
   const errorStyles = error
