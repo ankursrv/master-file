@@ -10,12 +10,12 @@ body {
 }
 
 .container {
-  padding-inline: 80px;
+  padding-inline: 64px;
   margin: 0 auto;
   max-width: 1440px;
 
   @include responsive (tablet) {
-    padding-inline: 20px;
+    padding-inline: 16px;
   }
 }
 
