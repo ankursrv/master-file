@@ -33,7 +33,7 @@ const cardData = [
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false)
   const [isOpenTwo, setIsOpenTwo] = useState(false)
-  const isMobile = useIsMobile ()
+  const isMobile = useIsMobile()
   return (
     <div className="container">
       <Wishlist position="top-left" />
@@ -73,8 +73,23 @@ export default function Home() {
         onClose={() => setIsOpen(false)}
         title="Deactivate account Dialog Title"
         closeIcon
+        slideFromBottom //true for slide from bottom and false for center
       >
         Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.Are you sure you want to deactivate your account? All of your data will be permanently removed.
+        Are you sure you want to deactivate your account? All of your data will be permanently removed.
+
       </DialogBox>
 
       {/* when close icon not available then dialogbox close click outer side  */}
