@@ -1,42 +1,169 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
 import { Button } from "@/components/atoms/button";
 import Icons from "@/components/atoms/icons";
-import React from "react";
+import S from "./bannerStyles";
 
-const Banner = () => {
+/* ─────────────────────────────────────────────────────────────────
+   BannerSlideContent — one slide: background media + overlay + text
+──────────────────────────────────────────────────────────────────── */
+const BannerSlideContent = ({ slide }) => {
+  const {
+    mediaType = "video",  // "image" | "video"
+    mediaSrc,
+    label,
+    heading,              // string  OR  { light: string, italic: string }
+    subtext,
+    tags = [],            // ["AI", "Quantum Computing", ...]
+    buttons = [],         // [{ label, variant, onClick }]
+  } = slide;
+
   return (
-    <div className="relative">
-      <video autoPlay loop muted className="w-full h-screen object-cover">
-        <source src="/images/home.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <>
+      {/* ── Background media ── */}
+      {mediaType === "video" ? (
+        <video
+          className={S.bannerMedia}
+          src={mediaSrc}
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        />
+      ) : (
+        <Image
+          src={mediaSrc}
+          alt={label || (typeof heading === "string" ? heading : "") || "Banner"}
+          fill
+          className={S.bannerMedia}
+          priority
+        />
+      )}
 
-      {/* Gradient Overlay */}
+      {/* ── Dark gradient overlay ── */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className={S.bannerOverlay}
         style={{
           background:
-            "linear-gradient(180deg, rgba(0, 0, 0, 0) 8.59%, #000000 132.71%)",
+            "linear-gradient(180deg, rgba(0,0,0,0) 8.59%, #000000 132.71%)",
         }}
+        aria-hidden="true"
       />
-      <div className="absolute inset-0 flex flex-col items-center justify-end text-white pb-20">
-        <small>In Focus</small>
-        <h1 className="text-4xl lg:w-[869px] text-center text-[74px] leading-116 flex flex-col mx-auto">
-          <span className="font-light">Some Inherit the Future.</span>
-          <span className="font-normal italic">Others Design It.</span>
-        </h1>
-        <p>
-          We shape those who build with emerging technologies at their core.
-        </p>
-        <div className="flex gap-4 mt-6">
-          <Button variant="heroPrimary" iconPosition="right" icon={<Icons.arrowRightUp />}>
-            Explore Programmes
-          </Button>
-          <Button variant="heroDark" iconPosition="right" icon={<Icons.arrowRightUp />}>
-            About Jio University
-          </Button>
-        </div>
+
+      {/* ── Text content ── */}
+      <div className={S.bannerContent}>
+
+        {/* Label */}
+        {label && <small className={S.bannerLabel}>{label}</small>}
+
+        {/* Heading */}
+        {heading && (
+          <h1 className={S.bannerHeading}>
+            {typeof heading === "string" ? (
+              heading
+            ) : (
+              <>
+                {heading.light && (
+                  <span className={S.headingLight}>{heading.light}</span>
+                )}
+                {heading.italic && (
+                  <span className={S.headingItalic}>{heading.italic}</span>
+                )}
+              </>
+            )}
+          </h1>
+        )}
+
+        {/* Subtext */}
+        {subtext && <p className={S.bannerSubtext}>{subtext}</p>}
+
+        {/* Tags — AI • QUANTUM COMPUTING • ROBOTICS */}
+        {tags.length > 0 && (
+          <div className={S.bannerTags} aria-label="Focus areas">
+            {tags.map((tag, i) => (
+              <React.Fragment key={tag}>
+                <span className={S.bannerTag}>{tag}</span>
+                {i < tags.length - 1 && (
+                  <span className={S.tagDot} aria-hidden="true" />
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        )}
+
+        {/* Buttons */}
+        {buttons.length > 0 && (
+          <div className={S.bannerBtns}>
+            {buttons.map((btn, i) => (
+              <Button
+                key={i}
+                variant={btn.variant || "heroPrimary"}
+                iconPosition="right"
+                icon={<Icons.arrowRightUp />}
+                onClick={btn.onClick}
+                ariaLabel={btn.label}
+              >
+                {btn.label}
+              </Button>
+            ))}
+          </div>
+        )}
       </div>
-    </div>
+    </>
+  );
+};
+
+/* ─────────────────────────────────────────────────────────────────
+   Banner — main export
+   Props:
+     slides: BannerSlide[]   — array of slide data
+     autoplay?: boolean      — default true  (only when multiple)
+     autoplayDelay?: number  — default 4000ms
+──────────────────────────────────────────────────────────────────── */
+const Banner = ({
+  slides = [],
+  autoplay = true,
+  autoplayDelay = 4000,
+}) => {
+  // ── Single slide → no Swiper overhead ──
+  if (slides.length === 1) {
+    return (
+      <section className={S.bannerWrapper} aria-label="Banner">
+        <BannerSlideContent slide={slides[0]} />
+      </section>
+    );
+  }
+
+  // ── Multiple slides → Swiper carousel with pagination ──
+  return (
+    <section className={S.bannerWrapper} aria-label="Banner">
+      <Swiper
+        className={S.bannerSlider}
+        modules={[Pagination, Autoplay]}
+        pagination={{ clickable: true }}
+        autoplay={
+          autoplay
+            ? { delay: autoplayDelay, disableOnInteraction: false }
+            : false
+        }
+        loop
+        speed={700}
+      >
+        {slides.map((slide, i) => (
+          <SwiperSlide key={i} className={S.bannerSlide}>
+            <BannerSlideContent slide={slide} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
   );
 };
 
