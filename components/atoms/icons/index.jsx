@@ -1,6 +1,24 @@
-import React from "react"
+import React from "react";
 
 const Icons = {
+  arrowRightUp: ({ props }) => (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M7 17L17 7M17 17V7H7"
+        stroke="white"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  ),
   arrowRight: ({ props }) => (
     <svg
       width="22"
@@ -2090,6 +2108,6 @@ const Icons = {
       </defs>
     </svg>
   ),
-}
+};
 
-export default Icons
+export default Icons;

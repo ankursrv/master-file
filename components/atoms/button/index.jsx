@@ -21,6 +21,9 @@ const buttonVariants = cva(styles.base, {
       shareNetwork: styles.shareNetwork,
       styleNone: styles.styleNone,
       link: styles.link,
+      // Hero Section Buttons (Figma)
+      heroPrimary: styles.heroPrimary,
+      heroDark: styles.heroDark,
     },
     size: {
       default: styles.default,

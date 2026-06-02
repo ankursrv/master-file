@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "theme-primary": "#f26727",
+        "theme-primary": "#E30513",
         "baby-powder": "#FFFEF4",
         "dreamless-sleep": "#111111",
         "white-crest": "#f9f8ef",
@@ -20,11 +20,11 @@ module.exports = {
         "decorator-white": "#f6f5eb",
         "american-silver": "#cfcfcf",
       },
+       lineHeight: {
+        116: '116%',
+        124: '124%',
+      },
     },
-  },
-  fontFamily: {
-    primary: ["Montserrat", "sans-serif"],
-    secondary: ["NexaRust", "sans-serif"],
   },
   plugins: [],
 }

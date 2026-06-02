@@ -1,10 +1,11 @@
+import Banner from '@/components/molecules/banner'
 import React from 'react'
 
 const Home = () => {
   return (
-    <section className="container">
-      This is Home page
-    </section>
+    <main>
+      <Banner />
+    </main>
   )
 }
 

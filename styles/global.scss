@@ -6,7 +6,7 @@
 
 body {
   background: whitesmoke;
-  font-family: "Montserrat", sans-serif;
+  font-family: "JioType", sans-serif;
 }
 
 .container {
@@ -19,37 +19,35 @@ body {
   }
 }
 
-// NexaRust Font 
+/* JioTypeVar — variable font, covers full weight range 100–900 */
 @font-face {
-  font-family: 'NexaRust';
+  font-family: "JioType";
+  src: url("/fonts/JioTypeW05-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal;
-  font-weight: normal;
-  src: url('../public/fonts/NexaRustSlab-Trial-Black3.woff') format('woff');
-  font-display: swap;
 }
 
 @font-face {
-  font-family: 'NexaRust';
+  font-family: "JioType";
+  src: url("/fonts/JioTypeW05-Regular.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
-  font-weight: normal;
-  src: url('/public/fonts/NexaRustSlab-Trial-BlackShadow3.woff') format('woff');
-  font-display: swap;
 }
 
-// Montserrat Font 
 @font-face {
-  font-family: 'Montserrat';
+  font-family: "JioType";
+  src: url("/fonts/JioTypeW05-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
-  font-weight: normal;
-  src: url('/public/fonts/Montserrat-VariableFont_wght.ttf') format('ttf');
-  font-display: swap;
 }
 
-h1,
-h2,
-h3 {
-  font-family: "NexaRust", sans-serif;
+@font-face {
+  font-family: "JioType";
+  src: url("/fonts/JioTypeW05-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
+
 
 .dotted {
   fill: rgba(128, 128, 128, 0.74);
