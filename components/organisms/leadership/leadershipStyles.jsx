@@ -16,7 +16,7 @@ const LeadershipStyles = {
 
   // ── Column / Card ────────────────────────────────────────────────
   column:
-    "relative flex flex-col",
+    "relative flex flex-col lg:h-[668px]",
 
   // ── Quote ────────────────────────────────────────────────────────
   quoteIcon:
@@ -40,10 +40,7 @@ const LeadershipStyles = {
 
   // ── Image (Absolute positioning at bottom right) ─────────────────
   imageWrapper:
-    "w-[280px] h-[320px] lg:min-w-[421px] lg:h-[485px] pointer-events-none z-0",
-
-  image:
-    "object-contain object-bottom",
+    "w-[280px] lg:w-[421px] pointer-events-none z-0",
 };
 
 export default LeadershipStyles;
