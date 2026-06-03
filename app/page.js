@@ -1,5 +1,6 @@
 import Banner from '@/components/molecules/banner'
 import TechParadigm from "@/components/organisms/techParadigm";
+import Leadership from "@/components/organisms/leadership";
 import React from 'react'
 
 /* ─── Slide Data ─────────────────────────────────────────────── */
@@ -39,6 +40,7 @@ const Home = () => {
     <main>
       <Banner slides={bannerSlides} autoplay autoplayDelay={5000} />
       <TechParadigm />
+      <Leadership />
     </main>
   )
 }

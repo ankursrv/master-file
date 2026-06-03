@@ -23,6 +23,7 @@ module.exports = {
        lineHeight: {
         116: '116%',
         124: '124%',
+        120: '120%',
       },
       backgroundImage: {
         'hero-gradient':
