@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         "theme-primary": "#E30513",
         "baby-powder": "#FFFEF4",
-        "dreamless-sleep": "#111111",
+        "dreamless-sleep": "#0D0D0D",
         "white-crest": "#f9f8ef",
         "dark-tone-ink": "#121212",
         "sea-nettle": "#f3763a",
@@ -23,6 +23,10 @@ module.exports = {
        lineHeight: {
         116: '116%',
         124: '124%',
+      },
+      backgroundImage: {
+        'hero-gradient':
+          'linear-gradient(180deg, #5D0023 0%, #CA0E1F 202.83%)',
       },
     },
   },

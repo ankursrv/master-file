@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 
 import { Button } from "@/components/atoms/button";
 import Icons from "@/components/atoms/icons";
-import S from "./bannerStyles";
+import styles from "./bannerStyles";
 
 /* ─────────────────────────────────────────────────────────────────
    BannerSlideContent — one slide: background media + overlay + text
@@ -30,7 +30,7 @@ const BannerSlideContent = ({ slide }) => {
       {/* ── Background media ── */}
       {mediaType === "video" ? (
         <video
-          className={S.bannerMedia}
+          className={styles.bannerMedia}
           src={mediaSrc}
           autoPlay
           muted
@@ -43,14 +43,14 @@ const BannerSlideContent = ({ slide }) => {
           src={mediaSrc}
           alt={label || (typeof heading === "string" ? heading : "") || "Banner"}
           fill
-          className={S.bannerMedia}
+          className={styles.bannerMedia}
           priority
         />
       )}
 
       {/* ── Dark gradient overlay ── */}
       <div
-        className={S.bannerOverlay}
+        className={styles.bannerOverlay}
         style={{
           background:
             "linear-gradient(180deg, rgba(0,0,0,0) 8.59%, #000000 132.71%)",
@@ -59,23 +59,23 @@ const BannerSlideContent = ({ slide }) => {
       />
 
       {/* ── Text content ── */}
-      <div className={S.bannerContent}>
+      <div className={styles.bannerContent}>
 
         {/* Label */}
-        {label && <small className={S.bannerLabel}>{label}</small>}
+        {label && <small className={styles.bannerLabel}>{label}</small>}
 
         {/* Heading */}
         {heading && (
-          <h1 className={S.bannerHeading}>
+          <h1 className={styles.bannerHeading}>
             {typeof heading === "string" ? (
               heading
             ) : (
               <>
                 {heading.light && (
-                  <span className={S.headingLight}>{heading.light}</span>
+                  <span className={styles.headingLight}>{heading.light}</span>
                 )}
                 {heading.italic && (
-                  <span className={S.headingItalic}>{heading.italic}</span>
+                  <span className={styles.headingItalic}>{heading.italic}</span>
                 )}
               </>
             )}
@@ -83,16 +83,16 @@ const BannerSlideContent = ({ slide }) => {
         )}
 
         {/* Subtext */}
-        {subtext && <p className={S.bannerSubtext}>{subtext}</p>}
+        {subtext && <p className={styles.bannerSubtext}>{subtext}</p>}
 
         {/* Tags — AI • QUANTUM COMPUTING • ROBOTICS */}
         {tags.length > 0 && (
-          <div className={S.bannerTags} aria-label="Focus areas">
+          <div className={styles.bannerTags} aria-label="Focus areas">
             {tags.map((tag, i) => (
               <React.Fragment key={tag}>
-                <span className={S.bannerTag}>{tag}</span>
+                <span className={styles.bannerTag}>{tag}</span>
                 {i < tags.length - 1 && (
-                  <span className={S.tagDot} aria-hidden="true" />
+                  <span className={styles.tagDot} aria-hidden="true" />
                 )}
               </React.Fragment>
             ))}
@@ -101,7 +101,7 @@ const BannerSlideContent = ({ slide }) => {
 
         {/* Buttons */}
         {buttons.length > 0 && (
-          <div className={S.bannerBtns}>
+          <div className={styles.bannerBtns}>
             {buttons.map((btn, i) => (
               <Button
                 key={i}
@@ -136,7 +136,7 @@ const Banner = ({
   // ── Single slide → no Swiper overhead ──
   if (slides.length === 1) {
     return (
-      <section className={S.bannerWrapper} aria-label="Banner">
+      <section className={styles.bannerWrapper} aria-label="Banner">
         <BannerSlideContent slide={slides[0]} />
       </section>
     );
@@ -144,9 +144,9 @@ const Banner = ({
 
   // ── Multiple slides → Swiper carousel with pagination ──
   return (
-    <section className={S.bannerWrapper} aria-label="Banner">
+    <section className={styles.bannerWrapper} aria-label="Banner">
       <Swiper
-        className={S.bannerSlider}
+        className={styles.bannerSlider}
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
         autoplay={
@@ -158,7 +158,7 @@ const Banner = ({
         speed={700}
       >
         {slides.map((slide, i) => (
-          <SwiperSlide key={i} className={S.bannerSlide}>
+          <SwiperSlide key={i} className={styles.bannerSlide}>
             <BannerSlideContent slide={slide} />
           </SwiperSlide>
         ))}

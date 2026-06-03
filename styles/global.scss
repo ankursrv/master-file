@@ -125,3 +125,24 @@ body {
     height: 20px;
   }
 }
+
+// ── Tech Paradigm — vertical scroll slider ──────────────────────────
+// Cards fade in + slide up from bottom when active
+.tech-paradigm-swiper {
+  .swiper-slide {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    // outgoing slide fades/slides away upward
+    &.swiper-slide-prev {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+  }
+
+  .swiper-slide-active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+}
