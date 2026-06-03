@@ -8,7 +8,7 @@ const LeadershipStyles = {
 
   // ── Heading ──────────────────────────────────────────────────────
   sectionTitle:
-    "text-3xl lg:text-[48px] tracking-[-4%] mb-12",
+    "text-3xl lg:text-[48px] tracking-[-4%] leading-116 mb-12",
 
   // ── Grid ─────────────────────────────────────────────────────────
   grid:

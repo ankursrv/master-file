@@ -4,7 +4,7 @@ const TechParadigmStyles = {
     "w-full bg-hero-gradient",
 
   sectionTitle:
-    "text-white text-3xl lg:text-[48px] tracking-[-4%] mb-12",
+    "text-white text-3xl lg:text-[48px] tracking-[-4%] leading-116 mb-12",
 
   // ── Swiper container — fixed height so vertical slides work ───────
   // height matches the card on each breakpoint
