@@ -2,6 +2,7 @@ import Banner from '@/components/molecules/banner'
 import TechParadigm from "@/components/organisms/techParadigm";
 import Leadership from "@/components/organisms/leadership";
 import Stories from "@/components/organisms/stories";
+import AcademicLeadership from "@/components/organisms/academicLeadership";
 import React from 'react'
 
 /* ─── Slide Data ─────────────────────────────────────────────── */
@@ -43,6 +44,7 @@ const Home = () => {
       <TechParadigm />
       <Leadership />
       <Stories />
+      <AcademicLeadership />
     </main>
   )
 }

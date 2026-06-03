@@ -13,9 +13,9 @@ const Icons = {
       <path
         d="M7 17L17 7M17 17V7H7"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   ),
