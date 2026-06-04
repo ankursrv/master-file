@@ -63,7 +63,7 @@ export default function ShadcnPracticePage() {
               <DialogHeader>
                 <DialogTitle>Edit profile</DialogTitle>
                 <DialogDescription>
-                  Make changes to your profile here. Click save when you're done.
+                  Make changes to your profile here. Click save when you&apos;re done.
                 </DialogDescription>
               </DialogHeader>
               <div className="py-4">
