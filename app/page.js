@@ -4,6 +4,7 @@ import Leadership from "@/components/organisms/leadership";
 import Stories from "@/components/organisms/stories";
 import AcademicLeadership from "@/components/organisms/academicLeadership";
 import React from 'react'
+import Impact from "@/components/organisms/impact";
 
 /* ─── Slide Data ─────────────────────────────────────────────── */
 const bannerSlides = [
@@ -45,6 +46,7 @@ const Home = () => {
       <Leadership />
       <Stories />
       <AcademicLeadership />
+      <Impact />
     </main>
   )
 }

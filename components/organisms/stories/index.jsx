@@ -2,7 +2,7 @@
 
 import React from "react";
 import CustomImage from "@/components/molecules/customImage";
-import S from "./storiesStyles";
+import styles from "./storiesStyles";
 
 /* ── Default stories data matching the screenshot ────────────────── */
 const defaultStories = [
@@ -51,45 +51,45 @@ const Stories = ({
   stories = defaultStories,
 }) => {
   return (
-    <section className={S.section}>
-      <div className={S.container}>
+    <section className={styles.section}>
+      <div className={styles.container}>
         
         {/* Header */}
-        <div className={S.headerWrapper}>
-          <h2 className={S.sectionTitle}>{sectionTitle}</h2>
+        <div className={styles.headerWrapper}>
+          <h2 className={styles.sectionTitle}>{sectionTitle}</h2>
           {sectionSubtitle && (
-            <p className={S.sectionSubtitle}>{sectionSubtitle}</p>
+            <p className={styles.sectionSubtitle}>{sectionSubtitle}</p>
           )}
         </div>
 
         {/* List of Stories */}
-        <div className={S.listWrapper}>
+        <div className={styles.listWrapper}>
           {stories.map((story, i) => (
-            <div key={i} className={S.cardRow}>
+            <div key={i} className={styles.cardRow}>
               
               {/* Left: Title & Author */}
-              <div className={S.colLeft}>
-                <div className={S.titleWrapper}>
-                  <h3 className={S.cardTitle}>
+              <div className={styles.colLeft}>
+                <div className={styles.titleWrapper}>
+                  <h3 className={styles.cardTitle}>
                     {story.title}
                   </h3>
                 </div>
-                <p className={S.authorText}>{story.author}</p>
+                <p className={styles.authorText}>{story.author}</p>
               </div>
 
               {/* Middle: Description */}
-              <div className={S.colMiddle}>
-                <p className={S.description}>{story.description}</p>
+              <div className={styles.colMiddle}>
+                <p className={styles.description}>{story.description}</p>
               </div>
 
               {/* Right: Image */}
-              <div className={S.colRight}>
-                <div className={S.imageWrapper}>
+              <div className={styles.colRight}>
+                <div className={styles.imageWrapper}>
                   <CustomImage
                     src={story.image.src}
                     alt={story.image.alt}
                     fill
-                    className={S.image}
+                    className={styles.image}
                     sizes="(max-width: 1024px) 100vw, 30vw"
                   />
                 </div>
