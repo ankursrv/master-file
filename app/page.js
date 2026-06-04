@@ -9,13 +9,21 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 export default function ShadcnPracticePage() {
   return (
     <main className="min-h-screen bg-zinc-50 dark:bg-zinc-900 p-8 flex flex-col items-center gap-8">
       <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50">Shadcn UI Practice Playground</h1>
       
-      <section className="flex flex-col items-center gap-4 w-full max-w-2xl p-6 bg-white dark:bg-zinc-800 rounded-xl shadow-sm">
+      <section className="flex flex-col items-center gap-4 w-full max-w-2xl p-6 bg-white dark:bg-zinc-800 rounded-xl shadow-xs">
         <h2 className="text-2xl font-semibold self-start mb-4">Cards & Buttons</h2>
         <Card className="w-full">
           <CardHeader>
@@ -34,13 +42,35 @@ export default function ShadcnPracticePage() {
         </Card>
       </section>
 
-      <section className="flex flex-col items-center gap-4 w-full max-w-2xl p-6 bg-white dark:bg-zinc-800 rounded-xl shadow-sm">
+      <section className="flex flex-col items-center gap-4 w-full max-w-2xl p-6 bg-white dark:bg-zinc-800 rounded-xl shadow-xs">
         <h2 className="text-2xl font-semibold self-start mb-4">Badges</h2>
         <div className="flex flex-wrap gap-2 self-start">
           <Badge>Default Badge</Badge>
           <Badge variant="secondary">Secondary</Badge>
           <Badge variant="destructive">Destructive</Badge>
           <Badge variant="outline">Outline</Badge>
+        </div>
+      </section>
+
+      <section className="flex flex-col items-center gap-4 w-full max-w-2xl p-6 bg-white dark:bg-zinc-800 rounded-xl shadow-xs">
+        <h2 className="text-2xl font-semibold self-start mb-4">Dialog</h2>
+        <div className="self-start">
+          <Dialog>
+            <DialogTrigger render={<Button variant="outline" />}>
+              Open Dialog
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Edit profile</DialogTitle>
+                <DialogDescription>
+                  Make changes to your profile here. Click save when you're done.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="py-4">
+                <p className="text-sm text-zinc-500">This is an example dialog from Shadcn UI. It is fully accessible and customizable.</p>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
       </section>
     </main>
