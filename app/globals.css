@@ -1,0 +1,215 @@
+@import "tailwindcss";
+@import "../styles/variables.css";
+@import "../styles/components.css";
+@import "../styles/swiper.css";
+
+/* ========================================
+   GLOBAL STYLES
+======================================== */
+body {
+  background: var(--color-light);
+  font-family: var(--font-panton);
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 1px solid var(--color-primary);
+  /* outline-offset: 1px; */
+  /* border-radius: 4px; */
+}
+
+.container {
+  padding-inline: 20px;
+  margin-inline: auto;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* ========================================
+   FONT FACES - Panton
+======================================== */
+@font-face {
+  font-family: "Panton";
+  src: url("/fonts/panton-thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("/fonts/panton-light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("/fonts/panton-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("/fonts/panton-semi-bold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("/fonts/panton-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("/fonts/panton-black.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Panton";
+  src: url("/fonts/panton-extra-black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ========================================
+   FONT FACES - Nexa Rust
+======================================== */
+@font-face {
+  font-family: "NexaRust";
+  src: url("/fonts/NexaRustSansBlack2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-black font-nexa;
+}
+
+h1 {
+  @apply text-[28px] md:text-5xl text-primary leading-130;
+}
+
+h2 {
+  @apply text-xl md:text-4xxl leading-120;
+}
+
+h3 {
+  @apply text-sm lg:text-xl leading-120;
+}
+
+h4 {
+  @apply text-xl lg:text-2xl leading-120 text-dark;
+}
+
+h5 {
+  @apply text-2xl lg:text-[32px] leading-120 text-dark font-nexa;
+}
+
+/* ========================================
+   UTILITY CLASSES
+======================================== */
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .bg-image {
+    background:
+      url("/images/section-bg-pattern/bg.webp") no-repeat 50% / cover fixed,
+      var(--color-light);
+  }
+  .bg-image2 {
+    background:
+      url("/images/section-bg-pattern/rdo-pattern.webp") no-repeat 50% / cover
+        fixed,
+      white;
+  }
+  .bg-image3 {
+    background:
+      url("/images/section-bg-pattern/rdo-pattern.webp") no-repeat 50% / cover
+        fixed,
+      var(--color-light);
+  }
+  .bg-image4 {
+    background:
+      url("/images/section-bg-pattern/rdo-pattern.webp") no-repeat 50% / cover
+        fixed,
+      linear-gradient(180deg, #ffffff 0%, #fffef4 100%);
+  }
+
+  .bg-gradient-1 {
+    background: linear-gradient(
+      180deg,
+      rgba(17, 17, 17, 0) 16.57%,
+      #111111 94.33%
+    );
+  }
+
+  .responsive-image-cover {
+    @apply w-full h-full object-cover;
+  }
+
+  .responsive-image-contain {
+    @apply w-full h-full object-contain;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE & Edge old */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
+}
+
+/* ========================================
+   CUSTOM SCROLLBAR
+======================================== */
+.scrollbar-theme1::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-theme1::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-theme1::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 999px;
+}
+
+.scrollbar-theme1::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.theme-orange::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+}
+
+/* ========================================
+   Calender Style
+======================================== */
+.rdp-month_grid {
+  width: 100%;
+}

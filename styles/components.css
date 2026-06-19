@@ -1,0 +1,499 @@
+/* ========================================
+   ACTIVITY GRID LAYOUT
+======================================== */
+.activity-grid-style {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  column-gap: 24px;
+  margin-bottom: 70px;
+  width: 100%;
+}
+
+.activity-grid-style .card:nth-child(n + 4) {
+  display: block;
+}
+
+.activity-grid-style .card:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  height: 428px;
+}
+
+.activity-grid-style .card:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1 / 2;
+  height: 225px;
+}
+
+.activity-grid-style .card:nth-child(3) {
+  grid-column: 3;
+  grid-row: 1 / 3;
+  height: 428px;
+}
+
+.activity-grid-style .card:nth-child(4) {
+  grid-column: 1;
+  grid-row: 3 / 4;
+  height: 225px;
+}
+
+.activity-grid-style .card:nth-child(5) {
+  grid-column: 2;
+  grid-row: 2 / 4;
+  height: 428px;
+}
+
+.activity-grid-style .card:nth-child(6) {
+  grid-column: 3;
+  grid-row: 3 / 4;
+  height: 225px;
+}
+
+@media (max-width: 991px) {
+  .activity-grid-style {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+
+  .activity-grid-style .card:nth-child(1),
+  .activity-grid-style .card:nth-child(2),
+  .activity-grid-style .card:nth-child(3),
+  .activity-grid-style .card:nth-child(4),
+  .activity-grid-style .card:nth-child(5),
+  .activity-grid-style .card:nth-child(6) {
+    grid-column: auto;
+    grid-row: auto;
+    height: 225px;
+  }
+
+  .activity-grid-style .card:nth-child(1) {
+    grid-column: 1 / -1;
+    height: 280px;
+  }
+
+  .activity-grid-style .card:nth-child(3),
+  .activity-grid-style .card:nth-child(n + 5) {
+    display: none;
+  }
+}
+
+/* ========================================
+   Booking Form
+======================================== */
+.booking-bg-image {
+  position: relative;
+}
+
+.booking-bg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/booking-bg.webp") no-repeat center/cover;
+  filter: grayscale(100%) brightness(0.3);
+  z-index: 0;
+}
+
+/* Light header with torn/grunge bottom edge */
+.booking-header-grunge {
+  position: relative;
+  isolation: isolate;
+  background-color: white;
+}
+
+.booking-header-grunge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/images/booking-form-bg1.png") repeat center / auto;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.booking-header-grunge::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 120px;
+  pointer-events: none;
+  background: url("/images/splash1.png") no-repeat center bottom / 100% auto;
+  z-index: 1;
+}
+
+/* Dark body with torn/grunge bottom edge */
+.booking-body-grunge {
+  position: relative;
+  padding-bottom: 120px;
+}
+
+.booking-body-grunge::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 88px;
+  pointer-events: none;
+  background: url("/images/splash2.png") no-repeat center bottom / 100% auto;
+  transform: scaleY(-1);
+  filter: invert(1);
+  z-index: 1;
+}
+
+/* Booking step progress bar */
+.booking-progress-track {
+  background-color: white;
+}
+
+.booking-progress-fill {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    var(--color-primary-200) 100%
+  );
+  transition: width 0.4s ease;
+}
+
+/* Dark variant for CustomSelect inside booking form */
+.participant-dark-select button {
+  background-color: #302b2c !important;
+  border: 1px solid #616161 !important;
+  border-radius: 8px !important;
+  height: 60px !important;
+  padding: 0 16px !important;
+  color: #fff !important;
+}
+
+.participant-dark-select button span {
+  color: #fff !important;
+}
+
+.participant-dark-select button svg {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* OTP input cells */
+.otp-cell input {
+  background-color: transparent !important;
+  border: 1px solid var(--color-primary) !important;
+  color: #fff !important;
+  text-align: center;
+}
+
+/* Payment method option card */
+.payment-option {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.payment-option:hover {
+  border-color: var(--color-primary);
+}
+
+.payment-option-selected {
+  border-color: var(--color-primary);
+  background: rgba(242, 103, 39, 0.15);
+}
+
+/* ========================================
+   LOVED BY THOUSANDS OF STUDENTS & PARENTS
+======================================== */
+.testimonial-bg-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      291.33deg,
+      #111111 0.26%,
+      rgba(17, 17, 17, 0.08) 36.27%,
+      rgba(17, 17, 17, 0.08) 68.16%,
+      #111111 99.74%
+    ),
+    url("/images/booking-bg.webp") center/cover no-repeat;
+  filter: brightness(0.4);
+  z-index: 0;
+}
+
+/* ========================================
+   Schedule GALLERY LAYOUT
+======================================== */
+.schedule-bg-image {
+  background: url("/images/section-bg-pattern/pattern-2.webp")
+    var(--color-secondary) no-repeat center/cover;
+}
+
+/* ── RIS variant 2-col grid */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+@media (max-width: 767px) {
+  .gallery {
+    gap: 16px;
+  }
+}
+
+.imageBox {
+  height: 174px;
+}
+
+@media (max-width: 768px) {
+  .imageBox {
+    height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .imageBox {
+    height: 182px;
+  }
+}
+
+.imageBox:nth-child(1) {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.imageBox:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.imageBox:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+/* ── RDO variant 3 columns */
+.gallery-rdo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 767px) {
+  .gallery-rdo {
+    gap: 8px;
+  }
+}
+
+.imageBox-rdo {
+  height: 200px;
+}
+
+@media (max-width: 767px) {
+  .imageBox-rdo {
+    height: 115px;
+  }
+}
+
+/* ========================================
+   RDO carousel navigation (Features / About Park)
+======================================== */
+.features-offered-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.features-offered-nav--prev {
+  background: white;
+  border: 1px solid var(--color-dark-100);
+  color: var(--color-dark);
+}
+
+.features-offered-nav--next {
+  background: var(--color-primary);
+  border: none;
+  color: white;
+}
+
+.features-offered-nav:hover {
+  opacity: 0.9;
+}
+@media (max-width: 767px) {
+  .features-offered-nav {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.navigation-style2 {
+  position: relative;
+}
+
+/* ========================================
+   VIDEO PLAYER STYLES
+======================================== */
+.playPauseButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.rotatingText {
+  animation: rotate 10s linear infinite;
+  pointer-events: none;
+  position: absolute;
+  top: 48%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 260px;
+}
+
+@media (max-width: 991px) {
+  .rotatingText {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.circle-text {
+  fill: #fff;
+  letter-spacing: 19px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.video-overlay::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* ========================================
+   FORM INPUT STYLES
+======================================== */
+input[type="file"]::file-selector-button {
+  display: none;
+}
+
+input[type="file"] {
+  color: transparent;
+}
+
+/* ========================================
+   CUSTOM RADIO BUTTONS
+======================================== */
+input[type="radio"] {
+  appearance: none;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-dark);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+input[type="radio"]:checked {
+  border-color: var(--color-primary);
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
+/* ========================================
+   CUSTOM CHECKBOXES
+======================================== */
+input[type="checkbox"] {
+  appearance: none;
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #111111b2;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+/* ========================================
+   You can Trust Us Background Image
+======================================== */
+.epic-pattern {
+  background: url("/images/epic-pattern.webp") no-repeat center/cover;
+  height: 147px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  .epic-pattern {
+    background-size: 200%;
+    top: -32px;
+  }
+}
+/* ========================================
+   EQ vs IQ Background Image
+======================================== */
+.eq-bg-image {
+  background: #fffef4 url("/images/iq-bg.png");
+  background-size: contain;
+}

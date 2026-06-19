@@ -1,78 +1,55 @@
-import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
+"use client";
+import React from "react";
+import Layout from "@/components/molecules/layout";
+import HeroBannerReh from "@/components/organisms/heroBannerReh";
+import VideoCustom from "@/components/molecules/videoCustom";
+import ProgramHighlightsReh from "@/components/organisms/programHighlightsReh";
+import WhatsIncluded from "@/components/organisms/whatsIncluded";
+import ComparisonReh from "@/components/organisms/comparisonReh";
+import OverviewHighlightsReh from "@/components/organisms/overviewHighlightsReh";
+import WhyChooseReh from "@/components/organisms/whyChooseReh";
+import StayLocationReh from "@/components/organisms/stayLocationReh";
+import WhatMealsReh from "@/components/organisms/whatMealsReh";
+import PickupDropReh from "@/components/organisms/pickupDropReh";
+import RoadmapReh from "@/components/organisms/roadmapReh";
+import WhyAdventureMattersReh from "@/components/organisms/whyAdventureMattersReh";
+import DosDontsReh from "@/components/organisms/dosDontsReh";
+import useIsMobile from "@/lib/useIsMobile";
 
-export default function ShadcnPracticePage() {
+const RocksportExperientialHoliday = () => {
+  const isMobile = useIsMobile();
   return (
-    <main className="min-h-screen bg-zinc-50 dark:bg-zinc-900 p-8 flex flex-col items-center gap-8">
-      <h1 className="text-4xl font-bold text-zinc-900 dark:text-zinc-50">Shadcn UI Practice Playground</h1>
-      
-      <section className="flex flex-col items-center gap-4 w-full max-w-2xl p-6 bg-white dark:bg-zinc-800 rounded-xl shadow-xs">
-        <h2 className="text-2xl font-semibold self-start mb-4">Cards & Buttons</h2>
-        <Card className="w-full">
-          <CardHeader>
-            <CardTitle>Welcome to your clean branch!</CardTitle>
-            <CardDescription>All JioInstitute components have been removed.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              You can now safely add, modify, and test Shadcn UI components here without affecting the main project.
-            </p>
-          </CardContent>
-          <CardFooter className="flex justify-between">
-            <Button variant="outline">Learn More</Button>
-            <Button>Get Started</Button>
-          </CardFooter>
-        </Card>
-      </section>
-
-      <section className="flex flex-col items-center gap-4 w-full max-w-2xl p-6 bg-white dark:bg-zinc-800 rounded-xl shadow-xs">
-        <h2 className="text-2xl font-semibold self-start mb-4">Badges</h2>
-        <div className="flex flex-wrap gap-2 self-start">
-          <Badge>Default Badge</Badge>
-          <Badge variant="secondary">Secondary</Badge>
-          <Badge variant="destructive">Destructive</Badge>
-          <Badge variant="outline">Outline</Badge>
-        </div>
-      </section>
-
-      <section className="flex flex-col items-center gap-4 w-full max-w-2xl p-6 bg-white dark:bg-zinc-800 rounded-xl shadow-xs">
-        <h2 className="text-2xl font-semibold self-start mb-4">Dialog</h2>
-        <div className="self-start">
-          <Dialog>
-            <DialogTrigger render={<Button variant="outline" />}>
-              Open Dialog
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle>Edit profile</DialogTitle>
-                <DialogDescription>
-                  Make changes to your profile here. Click save when you&apos;re done.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="py-4">
-                <p className="text-sm text-zinc-500">This is an example dialog from Shadcn UI. It is fully accessible and customizable.</p>
-              </div>
-            </DialogContent>
-          </Dialog>
-        </div>
-      </section>
-    </main>
+    <Layout
+      footerHide
+      showButton
+      headerStyle="bg-transparent fixed"
+      navStyle="mt-8 !py-0"
+      schoolNameStyle="bg-dark-300/40 p-2 rounded-lg md:rounded-xl"
+    >
+      <HeroBannerReh />
+      <VideoCustom
+        splitHeading
+        sectionHeading={{
+          title: "Your Gateway to Asia's Best Adventure",
+          sub_title: "",
+        }}
+        description="Where young explorers discover courage, teamwork, and the thrill of real-world adventure—guided by expertise you can trust."
+        bannerStyle="bg-image2"
+        videoContainerStyle={isMobile ? "!mt-8" : ""}
+      />
+      <ProgramHighlightsReh />
+      <WhatsIncluded />
+      <StayLocationReh />
+      <PickupDropReh />
+      <WhatMealsReh />
+      <ComparisonReh />
+      <OverviewHighlightsReh />
+      <WhyAdventureMattersReh />
+      <WhyChooseReh />
+      <RoadmapReh />
+      <DosDontsReh />
+    </Layout>
   );
-}
+};
+
+export default RocksportExperientialHoliday;

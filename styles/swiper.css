@@ -1,0 +1,41 @@
+/* ========================================
+   SWIPER PAGINATION STYLES
+======================================== */
+.swiper-pagination {
+  bottom: 10px !important;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  width: 30px !important;
+  height: 4px !important;
+  border-radius: 2px !important;
+  background: #cfcec6 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--color-primary) !important;
+  width: 80px !important;
+}
+
+/* ========================================
+   SWIPER NAVIGATION STYLES
+======================================== */
+.navigation-style1 .swiper-button-prev,
+.navigation-style1 .swiper-button-next {
+  color: black;
+  background: white;
+  border-radius: 100%;
+}
+
+.navigation-style1 .swiper-navigation-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.slide-card .swiper-wrapper {
+  align-items: stretch;
+}
