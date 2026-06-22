@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/master-file/components/organisms/card/index.jsx"],"sourcesContent":["import Image from \"next/image\"\r\nimport React from \"react\"\r\n\r\nconst Card = () => {\r\n  return (\r\n    <div>\r\n      {/* Image Section  */}\r\n      <div className=\"aspect-[4/3] h-[222px]\">\r\n        <Image \r\n          src=\"https://images.unsplash.com/photo-1763162944506-ee1fbaf5a733?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\"\r\n        width={1000}\r\n        height={1000}\r\n        alt=\"not found\"\r\n        className=\"w-full h-full object-contain\"\r\n        />\r\n      </div>\r\n      \r\n    </div>\r\n  )\r\n}\r\n\r\nexport default Card\r\n"],"names":[],"mappings":";;;;;AAAA;AACA;;;;AAEA,MAAM,OAAO;IACX,qBACE,8OAAC;kBAEC,cAAA,8OAAC;YAAI,WAAU;sBACb,cAAA,8OAAC,wIAAK;gBACJ,KAAI;gBACN,OAAO;gBACP,QAAQ;gBACR,KAAI;gBACJ,WAAU;;;;;;;;;;;;;;;;AAMlB;uCAEe","debugId":null}},
-    {"offset": {"line": 59, "column": 0}, "map": {"version":3,"sources":["file:///D:/master-file/app/page.js"],"sourcesContent":["import Card from \"@/components/organisms/card\";\n\nexport default function Home() {\n  return (\n    <div className=\"container\">\n      <Card />\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAA;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC,oJAAI;;;;;;;;;;AAGX","debugId":null}}]
-}

@@ -1,8 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/master-file/lib/utils.js"],"sourcesContent":["import { clsx } from \"clsx\"\r\nimport { twMerge } from \"tailwind-merge\"\r\n\r\nexport function cn(...inputs) {\r\n  return twMerge(clsx(inputs))\r\n}"],"names":[],"mappings":";;;;AAAA;AACA;;;AAEO,SAAS,GAAG,GAAG,MAAM;IAC1B,OAAO,IAAA,sKAAO,EAAC,IAAA,6IAAI,EAAC;AACtB","debugId":null}},
-    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":["file:///D:/master-file/components/atoms/tag/index.jsx"],"sourcesContent":["import { cn } from \"@/lib/utils\"\r\nimport React from \"react\"\r\n\r\nconst Tag = ({className}) => {\r\n  return (\r\n    <div className={cn(\"bg-green-300 w-fit py-1 min-h-8 min-w-32 text-lg font-semibold flex items-center justify-center px-4 rounded-full\", className)}>\r\n      Family tag\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default Tag\r\n"],"names":[],"mappings":";;;;;AAAA;AACA;;;;AAEA,MAAM,MAAM,CAAC,EAAC,SAAS,EAAC;IACtB,qBACE,8OAAC;QAAI,WAAW,IAAA,kHAAE,EAAC,qHAAqH;kBAAY;;;;;;AAIxJ;uCAEe","debugId":null}},
-    {"offset": {"line": 58, "column": 0}, "map": {"version":3,"sources":["file:///D:/master-file/app/page.js"],"sourcesContent":["import Image from \"next/image\";\nimport { cn } from \"@/lib/utils\";\nimport Tag from \"@/components/atoms/tag\";\n\nexport default function Home() {\n  return (\n    <div className=\"container\">\n      \n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAA;AACA;AACA;;;;;AAEe,SAAS;IACtB,qBACE,8OAAC;QAAI,WAAU;;;;;;AAInB","debugId":null}}]
-}

@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///D:/master-file/components/atoms/wishlist/indes.jsx"],"sourcesContent":["\"use client\"\r\nimport Image from \"next/image\"\r\nimport React, { useState } from \"react\"\r\n\r\nconst Wishlist = () => {\r\n  const [wishlist, setWishlist] = useState(false)\r\n\r\n  return (\r\n    <div className=\"bg-white size-8 flex items-center justify-center rounded-full absolute top-3 right-3\">\r\n      <button className=\"size-6\" onClick={() => setWishlist(!wishlist)}>\r\n        <Image\r\n          src={wishlist ? \"/images/icon/heart-icon-fill.svg\" : \"/images/icon/heart-icon.svg\"}\r\n          width={1000}\r\n          height={1000}\r\n          alt=\"not found\"\r\n        />\r\n      </button>\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default Wishlist\r\n"],"names":[],"mappings":";;;;;AACA;AACA;;;AAFA;;;AAIA,MAAM,WAAW;;IACf,MAAM,CAAC,UAAU,YAAY,GAAG,IAAA,yKAAQ,EAAC;IAEzC,qBACE,6LAAC;QAAI,WAAU;kBACb,cAAA,6LAAC;YAAO,WAAU;YAAS,SAAS,IAAM,YAAY,CAAC;sBACrD,cAAA,6LAAC,2IAAK;gBACJ,KAAK,WAAW,qCAAqC;gBACrD,OAAO;gBACP,QAAQ;gBACR,KAAI;;;;;;;;;;;;;;;;AAKd;GAfM;KAAA;uCAiBS","debugId":null}}]
-}
