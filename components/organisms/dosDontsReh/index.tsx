@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import CustomImage from "@/components/molecules/customImage";
 import CustomSlider from "@/components/molecules/customSlider";
 
@@ -29,10 +28,6 @@ interface DosDontsRehProps {
   dos?: DosDontsGroup;
   donts?: DosDontsGroup;
 }
-
-/* ------------------------------------------------------------------ */
-/*  Icons                                                              */
-/* ------------------------------------------------------------------ */
 
 const iconBase = {
   width: 26,
@@ -63,23 +58,19 @@ const icons: Record<IconKey, React.ReactNode> = {
   luggage: <IconImage file="lugguge" />,
   daypack: <IconImage file="daypack" />,
   warmLayers: (
-    <svg {...iconBase}>
+    <svg {...iconBase} className="size-full object-cover">
       <path d="M9 3h6l4 3-2.5 3L15 7.5V21H9V7.5L7.5 9 5 6l4-3Z" />
     </svg>
   ),
   cash: <IconImage file="card" />,
   mobile: <IconImage file="mobile" />,
   tuckFood: (
-    <svg {...iconBase}>
+    <svg {...iconBase} className="size-full object-cover">
       <path d="M6 3v8a3 3 0 0 0 6 0V3M9 3v18" />
       <path d="M17 3c-1.5 1.5-2 3-2 5s.5 3.5 2 4v9" />
     </svg>
   ),
 };
-
-/* ------------------------------------------------------------------ */
-/*  Data                                                               */
-/* ------------------------------------------------------------------ */
 
 const defaultDos: DosDontsGroup = {
   label: "Do's",
@@ -131,10 +122,6 @@ const defaultDonts: DosDontsGroup = {
   ],
 };
 
-/* ------------------------------------------------------------------ */
-/*  Sub-components                                                     */
-/* ------------------------------------------------------------------ */
-
 const Card = ({ icon, title, description }: DosDontsCard) => (
   <article className="flex h-full flex-col rounded-xl bg-[#1A1A1A] p-5 md:p-8 border border-dark-300/[12%]">
     <div className="flex items-start justify-between gap-3">
@@ -181,10 +168,6 @@ const Row = ({ label, description, items }: DosDontsGroup) => (
     </div>
   </div>
 );
-
-/* ------------------------------------------------------------------ */
-/*  Component                                                          */
-/* ------------------------------------------------------------------ */
 
 const DosDontsReh = ({
   title = "What to do and what not to",

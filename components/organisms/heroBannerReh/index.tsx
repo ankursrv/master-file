@@ -84,7 +84,7 @@ const HeroBannerReh = ({
         width={1456}
         height={88}
         aria-hidden="true"
-        className="absolute inset-x-0 -bottom-[0.4px] lg:bottom-0 z-50 w-full select-none pointer-events-none h-[23px] md:h-auto"
+        className="absolute inset-x-0 -bottom-[0.4px] z-50 w-full select-none pointer-events-none h-[23px] md:h-auto"
       />
     </section>
   );

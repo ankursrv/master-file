@@ -60,7 +60,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       outlinePrimary:
         "outline-2 outline-primary !text-primary hover:bg-primary hover:!text-white",
       outlineFill:
-        "bg-primary text-primary rounded-xl md:min-w-[215px] md:!h-15 outline-2 outline-primary hover:bg-transparent hover:!text-primary",
+        "bg-primary text-white rounded-xl md:min-w-[215px] md:!h-15 outline-2 outline-primary hover:bg-transparent hover:!text-primary",
     };
 
     // Size classes

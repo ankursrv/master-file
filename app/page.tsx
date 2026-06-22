@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Layout from "@/components/molecules/layout";
 import HeroBannerReh from "@/components/organisms/heroBannerReh";
 import VideoCustom from "@/components/molecules/videoCustom";
