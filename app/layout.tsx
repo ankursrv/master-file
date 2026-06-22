@@ -2,7 +2,7 @@ import "./globals.css";
 import type { ReactNode } from "react";
 
 export const metadata = {
-  title: "TypeScript Learning Notes",
+  title: "TypeScript Learning",
   description: "Next.js App with Tailwind CSS",
 };
 
