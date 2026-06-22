@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///D:/master-file/app/page.js"],"sourcesContent":["import React from 'react'\r\n\r\nconst Home = () => {\r\n  return (\r\n    <section className=\"container\">\r\n      This is Home page\r\n    </section>\r\n  )\r\n}\r\n\r\nexport default Home\r\n"],"names":[],"mappings":";;;;;AAAA;;;AAEA,MAAM,OAAO;IACX,qBACE,8OAAC;QAAQ,WAAU;kBAAY;;;;;;AAInC;uCAEe","debugId":null}}]
+}
