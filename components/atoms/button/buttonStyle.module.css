@@ -1,3 +1,5 @@
+@reference "../../../styles/theme.css";
+
 .base {
   @apply flex items-center justify-center rounded-[90px] font-bold px-5 h-12 lg:h-16 transition-all ease-in duration-200 min-w-[135px] md:min-w-[150px];
 }
@@ -80,7 +82,7 @@
   }
 }
 
-//baseCampBtn
+/* baseCampBtn */
 .outline {
   @apply h-12 border border-theme-primary pr-0;
 
@@ -110,7 +112,7 @@
   }
 }
 
-// Tribe card Btn 
+/* Tribe card Btn */
 .fillPrimary {
   @apply bg-theme-primary text-xl text-white border border-theme-primary;
 
@@ -144,7 +146,7 @@
   }
 }
 
-// pdp 
+/* pdp */
 .download {
   @apply border border-theme-primary h-[42px];
 
@@ -185,7 +187,7 @@
   }
 }
 
-// Button Sizes 
+/* Button Sizes */
 .wFull {
   @apply w-full;
 }

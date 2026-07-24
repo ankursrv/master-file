@@ -1,0 +1,21 @@
+@reference "../../../styles/theme.css";
+
+.inputStyle1 {
+  @apply border border-dark-tone-ink/15 bg-baby-powder py-3 px-6;
+}
+
+.inputStyle2 {
+  @apply bg-dark-tone-ink/10 border border-american-silver;
+}
+
+.inputStyle3 {
+  @apply focus:ring-0;
+}
+
+.sizeLg {
+  @apply h-[60px];
+}
+
+.sizeMd {
+  @apply h-12;
+}

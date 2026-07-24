@@ -1,0 +1,5 @@
+@reference "../../../styles/theme.css";
+
+.default {
+  @apply bg-white-crest border border-[#12121233] rounded-xl p-5;
+}

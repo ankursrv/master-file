@@ -2,6 +2,8 @@ import React from "react"
 import { Field, Input, Label } from "@headlessui/react"
 import { cn } from "@/lib/utils"
 
+import styles from "./inputStyle.module.css"
+
 const CustomInput = ({
   containerStyle,
   label,
@@ -27,14 +29,14 @@ const CustomInput = ({
   checked,
 }) => {
   const inputStyles = {
-    inputStyle1: "border border-dark-tone-ink/15 bg-baby-powder py-3 px-6",
-    inputStyle2: "bg-dark-tone-ink/10 border border-american-silver",
-    inputStyle3: "focus:ring-0",
+    inputStyle1: styles.inputStyle1,
+    inputStyle2: styles.inputStyle2,
+    inputStyle3: styles.inputStyle3,
   }
 
   const sizes = {
-    lg: "h-[60px]",
-    md:"h-12",
+    lg: styles.sizeLg,
+    md: styles.sizeMd,
   }
 
   const errorStyles = error

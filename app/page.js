@@ -34,12 +34,12 @@ const Home = () => {
   ];
 
   return (
-    <section className="container mx-auto p-8 space-y-12">
+    <section className="container p-8 space-y-12">
       <Typography variant="h1" className="text-4xl font-bold mb-8 text-center">Components</Typography>
 
       <div className="space-y-4">
         <Typography variant="h2" className="text-2xl font-semibold border-b pb-2">Atoms</Typography>
-        
+
         <div className="space-y-2">
           <Typography variant="h3">Button</Typography>
           <div className="flex gap-4 flex-wrap">
@@ -52,8 +52,8 @@ const Home = () => {
 
         <div className="space-y-2 max-w-md">
           <Typography variant="h3">CustomInput</Typography>
-          <CustomInput 
-            label="Test Input" 
+          <CustomInput
+            label="Test Input"
             placeholder="Enter something..."
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
@@ -73,7 +73,7 @@ const Home = () => {
 
       <div className="space-y-4">
         <Typography variant="h2" className="text-2xl font-semibold border-b pb-2">Molecules</Typography>
-        
+
         <div className="space-y-2 max-w-xl">
           <Typography variant="h3">CustomAccordion</Typography>
           <CustomAccordion items={accordionItems} />
@@ -82,18 +82,18 @@ const Home = () => {
         <div className="space-y-2">
           <Typography variant="h3">CustomImage</Typography>
           <div className="w-40 h-40 relative">
-            <CustomImage 
-              src="/images/card/card-img1.jpeg" 
-              width={150} 
-              height={150} 
-              alt="Test Image" 
+            <CustomImage
+              src="/images/card/card-img1.jpeg"
+              width={150}
+              height={150}
+              alt="Test Image"
             />
           </div>
         </div>
 
         <div className="space-y-2 max-w-xs">
           <Typography variant="h3">CustomSelect</Typography>
-          <CustomSelect 
+          <CustomSelect
             label="Select Option"
             value={selectValue}
             onChange={setSelectValue}
@@ -107,20 +107,20 @@ const Home = () => {
 
       <div className="space-y-4">
         <Typography variant="h2" className="text-2xl font-semibold border-b pb-2">Organisms</Typography>
-        
+
         <div className="space-y-2">
           <Typography variant="h3">Card</Typography>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card 
-              variant="activityCard" 
-              title="Test Activity" 
-              city="New Delhi" 
-              day="2 Days" 
+            <Card
+              variant="activityCard"
+              title="Test Activity"
+              city="New Delhi"
+              day="2 Days"
               src="/images/card/card-img1.webp"
               supercoin
             />
-            <Card 
-              variant="onlyTitle" 
+            <Card
+              variant="onlyTitle"
               src="/images/card/card-img1.webp"
             />
           </div>
@@ -142,8 +142,8 @@ const Home = () => {
         <div className="space-y-2">
           <Typography variant="h3">DialogBox</Typography>
           <Button onClick={() => setDialogOpen(true)}>Open Dialog</Button>
-          <DialogBox 
-            isOpen={dialogOpen} 
+          <DialogBox
+            isOpen={dialogOpen}
             onClose={() => setDialogOpen(false)}
             title="Test Dialog"
             closeIcon={true}

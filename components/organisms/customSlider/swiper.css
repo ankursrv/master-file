@@ -1,0 +1,33 @@
+/* Swiper Pagination Bullet Styles */
+.swiper-pagination {
+  bottom: 10px !important;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.swiper-pagination-bullet {
+  width: 30px !important;
+  height: 4px !important;
+  border-radius: 2px !important;
+  background: #CFCEC6 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #FF6B35 !important;
+  width: 80px !important;
+}
+
+/* Swiper Next & Prev button Styles */
+.navigation-style1 .swiper-button-prev,
+.navigation-style1 .swiper-button-next {
+  color: black;
+  background: white;
+  border-radius: 100%;
+}
+
+.navigation-style1 .swiper-navigation-icon {
+  width: 20px;
+  height: 20px;
+}

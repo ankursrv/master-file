@@ -4,6 +4,7 @@ import { Pagination, Navigation, FreeMode, Mousewheel } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "./swiper.css";
 
 const CustomSlider = ({
   items,

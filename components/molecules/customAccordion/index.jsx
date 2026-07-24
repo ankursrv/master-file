@@ -3,8 +3,10 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react
 import Icons from "@/components/atoms/icons"
 import { cn } from "@/lib/utils"
 
+import styles from "./accordionStyle.module.css"
+
 const variants = {
-  default: "bg-white-crest border border-[#12121233] rounded-xl p-5",
+  default: styles.default,
 }
 
 const CustomAccordion = ({

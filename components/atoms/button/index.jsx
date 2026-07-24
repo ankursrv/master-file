@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 import { forwardRef } from "react";
 
-import styles from "./buttonStyle.module.scss";
+import styles from "./buttonStyle.module.css";
 
 const buttonVariants = cva(styles.base, {
   variants: {

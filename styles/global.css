@@ -1,0 +1,51 @@
+body {
+  background: whitesmoke;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  padding-inline: 64px;
+  margin-inline: auto;
+  max-width: 1440px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-inline: 16px;
+  }
+}
+
+/* NexaRust Font */
+@font-face {
+  font-family: 'NexaRust';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../public/fonts/NexaRustSlab-Trial-Black3.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NexaRust';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/NexaRustSlab-Trial-BlackShadow3.woff') format('woff');
+  font-display: swap;
+}
+
+/* Montserrat Font */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "NexaRust", sans-serif;
+}

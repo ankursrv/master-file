@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "NexaRust", sans-serif;
+  --color-theme-primary: #f26727;
+  --color-baby-powder: #FFFEF4;
+  --color-dreamless-sleep: #111111;
+  --color-white-crest: #f9f8ef;
+  --color-dark-tone-ink: #121212;
+  --color-sea-nettle: #f3763a;
+  --color-night-blooming-jasmine: #f8f7ec;
+  --color-stamped-concrete: #a09f99;
+  --color-decorator-white: #f6f5eb;
+  --color-american-silver: #cfcfcf;
+}
