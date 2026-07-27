@@ -1,6 +1,6 @@
-// ----------------------------------
-// Placeholder Mixin
-// ----------------------------------
+/* // ---------------------------------- */
+/* // Placeholder Mixin */
+/* // ---------------------------------- */
 @mixin input-placeholder {
   &.placeholder {
     @content;
@@ -23,11 +23,11 @@
   }
 }
 
-// ----------------------------------
-// ✅ Responsive Media Query Mixins
-// ----------------------------------
+/* // ---------------------------------- */
+/* // ✅ Responsive Media Query Mixins */
+/* // ---------------------------------- */
 
-// 📌 Breakpoint Variables
+/* // 📌 Breakpoint Variables */
 $iphone5-width: 320px;
 $mobile-width: 767px;
 $tablet-width: 768px;
@@ -35,9 +35,9 @@ $tablet-p-width: 991px;
 $desktop-width: 1200px;
 $desktop-large-width: 1900px;
 
-// ----------------------------------
-// ✅ Reusable Media Query Mixin
-// ----------------------------------
+/* // ---------------------------------- */
+/* // ✅ Reusable Media Query Mixin */
+/* // ---------------------------------- */
 
 @mixin responsive($breakpoint) {
   @if $breakpoint ==iphone5 {
@@ -78,16 +78,16 @@ $desktop-large-width: 1900px;
 
   @else {
 
-    // 🎯 Custom media query support
+    /* // 🎯 Custom media query support */
     @media #{$breakpoint} {
       @content;
     }
   }
 }
 
-// ----------------------------------
-// Transition Mixin
-// ----------------------------------
+/* // ---------------------------------- */
+/* // Transition Mixin */
+/* // ---------------------------------- */
 @mixin transition($transition-property: all,
   $transition-time: 0.3s,
   $method: cubic-bezier(0.165, 0.84, 0.44, 1)) {
@@ -98,9 +98,9 @@ $desktop-large-width: 1900px;
   transition: $transition-property $transition-time $method;
 }
 
-// ----------------------------------
-// Heading Color
-// ----------------------------------
+/* // ---------------------------------- */
+/* // Heading Color */
+/* // ---------------------------------- */
 @mixin headings-all() {
 
   h1,
@@ -119,9 +119,9 @@ $desktop-large-width: 1900px;
   }
 }
 
-// ----------------------------------
-// Truncate Text (ellipsis) Mixin
-// ----------------------------------
+/* // ---------------------------------- */
+/* // Truncate Text (ellipsis) Mixin */
+/* // ---------------------------------- */
 @mixin truncate($truncation-boundary) {
   max-width: $truncation-boundary;
   white-space: nowrap;
@@ -129,9 +129,9 @@ $desktop-large-width: 1900px;
   text-overflow: ellipsis;
 }
 
-// ----------------------------------
-// Font Smoothing Mixin (Cross Browser)
-// ----------------------------------
+/* // ---------------------------------- */
+/* // Font Smoothing Mixin (Cross Browser) */
+/* // ---------------------------------- */
 @mixin font-smoothing($value: on) {
   @if $value ==on {
     -webkit-font-smoothing: antialiased;
@@ -144,9 +144,9 @@ $desktop-large-width: 1900px;
   }
 }
 
-// ----------------------------------
-// Keyframes Mixin (Cross Browser)
-// ----------------------------------
+/* // ---------------------------------- */
+/* // Keyframes Mixin (Cross Browser) */
+/* // ---------------------------------- */
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
@@ -169,9 +169,9 @@ $desktop-large-width: 1900px;
   }
 }
 
-// ----------------------------------
-// Animation (Cross Browser)
-// ----------------------------------
+/* // ---------------------------------- */
+/* // Animation (Cross Browser) */
+/* // ---------------------------------- */
 @mixin animation($str) {
   -webkit-animation: #{$str};
   -moz-animation: #{$str};
@@ -180,7 +180,7 @@ $desktop-large-width: 1900px;
   animation: #{$str};
 }
 
-// Image cover
+/* // Image cover */
 @mixin imageCover() {
   position: absolute;
   top: 0;
@@ -203,7 +203,7 @@ $desktop-large-width: 1900px;
   display: inline;
 }
 
-// ScrollBar Custmize
+/* // ScrollBar Custmize */
 @mixin scrollbarCustom {
   &::-webkit-scrollbar {
     width: 2px;
@@ -236,7 +236,7 @@ $desktop-large-width: 1900px;
   background-color: $color;
 }
 
-// ----------- display flex------------------
+/* // ----------- display flex------------------ */
 
 @mixin d-flex($jc, $ai) {
   display: flex;
@@ -275,7 +275,7 @@ $desktop-large-width: 1900px;
   overflow: hidden;
 }
 
-// transition
+/* // transition */
 @mixin transition($time) {
   transition: all $time ease-in-out;
 }

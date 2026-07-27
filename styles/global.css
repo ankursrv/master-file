@@ -1,8 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@import "./mixins.scss";
+
 
 body {
   background: whitesmoke;
@@ -18,7 +15,7 @@ body {
   }
 }
 
-// NexaRust Font 
+/* // NexaRust Font  */
 @font-face {
   font-family: 'NexaRust';
   font-style: normal;
@@ -35,7 +32,7 @@ body {
   font-display: swap;
 }
 
-// Montserrat Font 
+/* // Montserrat Font  */
 @font-face {
   font-family: 'Montserrat';
   font-style: normal;
@@ -54,7 +51,7 @@ h3 {
   fill: rgba(128, 128, 128, 0.74);
 }
 
-// Image Responsive 
+/* // Image Responsive  */
 .responsive-image-cover {
   width: 100%;
   height: 100%;
@@ -67,7 +64,7 @@ h3 {
   object-fit: contain;
 }
 
-// Custom Scrollbar 
+/* // Custom Scrollbar  */
 .scrollbar-theme1::-webkit-scrollbar {
   width: 4px;
 }
@@ -89,7 +86,7 @@ h3 {
   background: orangered;
 }
 
-// Swiper Pagination Bullet Styles 
+/* // Swiper Pagination Bullet Styles  */
 .swiper-pagination {
   bottom: 10px !important;
   display: flex;
@@ -110,7 +107,7 @@ h3 {
   width: 80px !important;
 }
 
-// Swiper Next & Perv button Styles
+/* // Swiper Next & Perv button Styles */
 .navigation-style1 {
 
   .swiper-button-prev,
