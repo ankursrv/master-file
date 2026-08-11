@@ -29,7 +29,7 @@ const ImpactStyles = {
   description: "text-base text-[#666666] leading-124 mb-6 line-clamp-2",
   
   // Link
-  link: "text-theme-primary w-fit text-sm lg:text-[18px] leading-[27px] flex items-center gap-2 cursor-pointer inline bg-gradient-to-r from-theme-primary to-theme-primary bg-no-repeat bg-left-bottom bg-[length:0%_2px] hover:bg-[length:100%_2px] transition-[background-size] duration-500 ease-out box-decoration-clone",
+  link: "text-theme-primary w-fit text-sm lg:text-[18px] leading-[27px] inline-flex items-center gap-2 cursor-pointer bg-gradient-to-r from-theme-primary to-theme-primary bg-no-repeat bg-left-bottom bg-[length:0%_2px] hover:bg-[length:100%_2px] transition-[background-size] duration-500 ease-out box-decoration-clone",
   linkIcon: "size-6",
 };
 
